@@ -1,0 +1,67 @@
+// On Page load - register listeners and load existing videos in datatable
+$(document).ready(function() {
+    
+    // Load existing videos
+    loadDataTable();
+
+    // Process the form "newVideo"
+    $("#newVideo").submit(function(event) {
+        postVideo(event);
+    });
+
+    // Reload Datatable on button click
+    $('#loadtable').click(function() {
+        loadDataTable();
+    });
+
+});
+
+
+// Load DataTable function
+function loadDataTable() {
+    var table = $('#videotable').DataTable({
+        destroy: true,
+        "ajax": {
+            "url": "/videos",      // Backend endpoint
+            "dataSrc": ""          // For flat JSON objects
+        },
+        "columns": [
+            { "data": "title" },
+            { "data": "description" },
+            { "data": "agerating" },
+            { "data": "genre" }
+        ]
+    });
+}
+
+
+// Submit video data function
+function postVideo(event) {
+
+    // Prevent default form submission (page reload)
+    event.preventDefault();
+
+    // Get the form data
+    var formData = {
+        'title': $('input[name=title]').val(),
+        'description': $('textarea[name=description]').val(),
+        'agerating': $('input[name=agerating]').val(),
+        'genre': $('input[name=genre]').val()
+    };
+
+    // Send AJAX POST request
+    $.ajax({
+        type: 'POST',
+        contentType: 'application/json',
+        url: '/videos',
+        data: JSON.stringify(formData),
+
+        success: function(data, textStatus, jQxhr) {
+            loadDataTable(); // Reload table after adding video
+        },
+
+        error: function(jqXhr, textStatus, errorThrown) {
+            console.log(errorThrown); // Show error in console
+        }
+    });
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Video Archiv</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="js/ajaxfunction.js"></script>
+</head>
+<body>
+
+    <div class="centerdiv">
+
+        <header>
+            <h1>Video Archiv</h1>
+        </header>
+
+        <section class="left">
+            <h1>Neues Video anlegen</h1>
+            <form id="newVideo">
+
+                <label for="title">Titel:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="description">Beschreibung:</label>
+                <textarea id="description" name="description" rows="10" required></textarea>
+
+                <label for="agerating">Altersbeschränkung:</label>
+                <input type="text" id="agerating" name="agerating" required>
+
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" name="genre" required>
+
+                <br>
+                <input type="submit" id="newVideoButton" value="Video hinzufügen">
+
+            </form>
+        </section>
+
+        <section class="right">
+            <h1>Meine Videos</h1>
+            <button id="loadtable">Laden</button>
+            <table id="videotable" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Titel</th>
+                        <th>Beschreibung</th>
+                        <th>Altersbeschränkung</th>
+                        <th>Genre</th>
+                    </tr>
+                </thead>
+            </table>
+        </section>
+
+        <footer>
+            Copyright (c) - 2017 by Me!
+        </footer>
+
+    </div>
+
+</body>
+</html>

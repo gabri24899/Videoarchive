@@ -1,0 +1,24 @@
+package fh.aalen;
+
+import org.testng.annotations.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import fh.aalen.video.Video;
+import fh.aalen.video.VideoService;
+import java.util.List;
+import static org.testng.Assert.assertNotNull;
+import static org.testng.Assert.assertTrue;
+
+@SpringBootTest
+public class VideoServiceTest {
+
+    @Autowired
+    private VideoService videoService;
+
+    @Test
+    public void testGetVideoListIsNotNull() {
+        List<Video> videos = videoService.getVideoList();
+        assertNotNull(videos, "Liste darf nicht null sein");
+        assertTrue(videos.size() > 0, "Liste sollte mindestens 1 Video enthalten");
+    }
+}

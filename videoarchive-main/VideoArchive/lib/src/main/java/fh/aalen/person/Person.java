@@ -1,0 +1,47 @@
+package fh.aalen.person;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import java.time.LocalDate;
+
+@Entity
+public class Person {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;  
+
+    private String surename;
+    private LocalDate birthdate;
+
+    public Person() {}
+
+    public Person(String surename, LocalDate birthdate) {
+        this.surename = surename;
+        this.birthdate = birthdate;
+    }
+
+    // Getter & Setter
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getSurename() {
+        return surename;
+    }
+
+    public void setSurename(String surename) {
+        this.surename = surename;
+    }
+
+    public LocalDate getBirthdate() {
+        return birthdate;
+    }
+
+    public void setBirthdate(LocalDate birthdate) {
+        this.birthdate = birthdate;
+    }
+}
