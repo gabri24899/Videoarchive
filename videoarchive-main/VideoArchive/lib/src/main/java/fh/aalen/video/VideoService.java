@@ -1,48 +1,54 @@
 package fh.aalen.video;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import java.util.Optional;
 
 @Service
 public class VideoService {
 	
-     private List<Video> videolist = new ArrayList<Video>(Arrays.asList(
-     new Video("Edge of Tomorrow", "16","In Zeitschleife gefangen bis Aliens vernichtet","SciFi"),
-     new Video("Security", "18","Marine rettet Mädchen in Kaufhaus","Action" )
-     ));
-     public List<Video> getVideoList() {
-     return videolist;
-     }
-     public Video getVideo(String title) {
-     for (Video v:videolist) {
-     if(v.getTitle().equals(title))
-     return v;
-     }
-     return null;
-     }
-     public void addVideo(Video video) {
-     videolist.add(video);
-     }
-     public void updateVideo(String title, Video video) {
-     for(int i=0; i<videolist.size();i++) {
-     Video v = videolist.get(i);
-     if(v.getTitle().equals(title)) {
-     videolist.set(i,video);
-     return;
-     }
-     }
-     }
-     public void deleteVideo(String title) {
-     for(int i=0; i<videolist.size();i++) {
-     Video v = videolist.get(i);
-     if(v.getTitle().equals(title)){
-     videolist.remove(i);
-     return;
-     }
-     }
-     }
-     }
+	
+	private List<Video> videolist = new ArrayList<Video>(Arrays.asList(
+		     new Video("Edge of Tomorrow", "16","In Zeitschleife gefangen bis Aliens vernichtet","SciFi"),
+		     new Video("Security", "18","Marine rettet Mädchen in Kaufhaus","Action" )
+		     ));
+		     public List<Video> getVideoList() {
+		     return videolist;
+		     }
+
+    @Autowired
+    private VideoRepository repository;
+
+    public Iterable<Video> getAllVideos() {
+        return repository.findAll();
+    }
+
+    public Optional<Video> getVideoById(Long id) {
+        return repository.findById(id);
+    }
+    
+    
+    
+
+    public Video addVideo(Video video) {
+        return repository.save(video);
+    }
+
+    public Video updateVideo(Long id, Video videoDetails) {
+        return repository.findById(id).map(v -> {
+            v.setTitle(videoDetails.getTitle());
+            v.setAge_rating(videoDetails.getAge_rating());
+            v.setDescription(videoDetails.getDescription());
+            v.setGenre(videoDetails.getGenre());
+            return repository.save(v);
+        }).orElseThrow(() -> new RuntimeException("Video nicht gefunden"));
+    }
+
+    public void deleteVideo(Long id) {
+        repository.deleteById(id);
+    }
+}

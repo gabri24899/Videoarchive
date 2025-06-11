@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-20T17:07:10 MESZ" name="Default suite" finished-at="2025-05-20T17:07:14 MESZ" duration-ms="3744">
+  <suite started-at="2025-06-11T12:46:57 MESZ" name="Default suite" finished-at="2025-06-11T12:47:01 MESZ" duration-ms="4313">
     <groups>
     </groups>
-    <test started-at="2025-05-20T17:07:10 MESZ" name="Default test" finished-at="2025-05-20T17:07:14 MESZ" duration-ms="3744">
+    <test started-at="2025-06-11T12:46:57 MESZ" name="Default test" finished-at="2025-06-11T12:47:01 MESZ" duration-ms="4313">
       <class name="fh.aalen.VideoServiceTest">
-        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:fh.aalen.VideoServiceTest@4b9df8a]" started-at="2025-05-20T17:07:10 MESZ" name="springTestContextBeforeTestClass" finished-at="2025-05-20T17:07:10 MESZ" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:fh.aalen.VideoServiceTest@4b9df8a]" started-at="2025-06-11T12:46:57 MESZ" name="springTestContextBeforeTestClass" finished-at="2025-06-11T12:46:57 MESZ" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:fh.aalen.VideoServiceTest@4b9df8a]" started-at="2025-05-20T17:07:10 MESZ" name="springTestContextPrepareTestInstance" finished-at="2025-05-20T17:07:13 MESZ" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="3336" status="PASS">
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:fh.aalen.VideoServiceTest@4b9df8a]" started-at="2025-06-11T12:46:57 MESZ" name="springTestContextPrepareTestInstance" finished-at="2025-06-11T12:47:01 MESZ" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="3822" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.VideoServiceTest@4b9df8a]" started-at="2025-05-20T17:07:13 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-05-20T17:07:14 MESZ" duration-ms="363" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.VideoServiceTest@4b9df8a]" started-at="2025-06-11T12:47:01 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-11T12:47:01 MESZ" duration-ms="430" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,11 +26,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testGetVideoListIsNotNull()[pri:0, instance:fh.aalen.VideoServiceTest@4b9df8a]" started-at="2025-05-20T17:07:14 MESZ" name="testGetVideoListIsNotNull" finished-at="2025-05-20T17:07:14 MESZ" duration-ms="7" status="PASS">
+        <test-method signature="testGetVideoListIsNotNull()[pri:0, instance:fh.aalen.VideoServiceTest@4b9df8a]" started-at="2025-06-11T12:47:01 MESZ" name="testGetVideoListIsNotNull" finished-at="2025-06-11T12:47:01 MESZ" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetVideoListIsNotNull -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.VideoServiceTest@4b9df8a]" started-at="2025-05-20T17:07:14 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-05-20T17:07:14 MESZ" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.VideoServiceTest@4b9df8a]" started-at="2025-06-11T12:47:01 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-11T12:47:01 MESZ" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,7 +41,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:fh.aalen.VideoServiceTest@4b9df8a]" started-at="2025-05-20T17:07:14 MESZ" name="springTestContextAfterTestClass" finished-at="2025-05-20T17:07:14 MESZ" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:fh.aalen.VideoServiceTest@4b9df8a]" started-at="2025-06-11T12:47:01 MESZ" name="springTestContextAfterTestClass" finished-at="2025-06-11T12:47:01 MESZ" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->

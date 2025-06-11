@@ -24,5 +24,6 @@ public class VideoServiceTest extends AbstractTestNGSpringContextTests {
         List<Video> videos = videoService.getVideoList();
         assertNotNull(videos, "Die Liste darf nicht null sein");
         assertTrue(videos.size() > 0, "Es sollte mindestens ein Video geben");
+       
     }
 }

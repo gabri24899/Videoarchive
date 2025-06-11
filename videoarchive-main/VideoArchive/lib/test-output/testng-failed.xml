@@ -5,6 +5,11 @@
     <classes>
       <class name="fh.aalen.VideoServiceTest">
         <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextAfterTestMethod"/>
           <include name="testGetVideoListIsNotNull"/>
         </methods>
       </class> <!-- fh.aalen.VideoServiceTest -->
