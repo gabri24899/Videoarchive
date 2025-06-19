@@ -13,26 +13,31 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 /**
- * Tests for VideoService showing method dependencies and priorities.
+ * Testklasse für den VideoService, zeigt Prioritäten und Abhängigkeiten zwischen Methoden.
  */
 public class VideoServiceTest {
 
     /**
-     * Helper subclass to allow injecting a mock repository via constructor.
+     * Hilfsklasse, um ein Repository im Service über Reflection zu setzen.
      */
     static class TestableVideoService extends VideoService {
         TestableVideoService(VideoRepository repo) {
+            // Setzt das private Feld "repository" im Elternobjekt
             ReflectionTestUtils.setField(this, "repository", repo);
         }
     }
 
-    /** Simple in-memory repository used instead of Mockito. */
+    /**
+     * Einfache In-Memory-Implementierung des VideoRepository.
+     * Wird für Tests verwendet, um auf eine echte Datenbank zu verzichten.
+     */
     static class InMemoryVideoRepository implements VideoRepository {
         private final Map<Long, Video> store = new HashMap<>();
         private long nextId = 1L;
 
         @Override
         public <S extends Video> S save(S entity) {
+            // Falls keine ID vorhanden ist, wird automatisch eine neue ID gesetzt
             if (entity.getId() == null) {
                 ReflectionTestUtils.setField(entity, "id", nextId++);
             }
@@ -109,10 +114,15 @@ public class VideoServiceTest {
         }
     }
 
+    // Test-Repository und Service-Instanzen
     private VideoRepository repository;
     private VideoService service;
     private Video sample;
 
+    /**
+     * Diese Methode wird vor jedem Test ausgeführt.
+     * Initialisiert das Repository, den Service und ein Beispielvideo.
+     */
     @BeforeMethod(alwaysRun = true)
     public void setup() {
         System.out.println("VideoServiceTest.setup");
@@ -121,6 +131,10 @@ public class VideoServiceTest {
         sample = new Video("Edge of Tomorrow", "16", "Zeitschleife", "SciFi");
     }
 
+    /**
+     * Testet das Hinzufügen eines Videos.
+     * Überprüft, ob das Video korrekt im Repository gespeichert wird.
+     */
     @Test(priority = 1, groups = {"crud"}, description = "Add video and verify repository call")
     public void createVideo() {
         Video saved = service.addVideo(sample);
@@ -128,6 +142,10 @@ public class VideoServiceTest {
         assertTrue(repository.findById(saved.getId()).isPresent());
     }
 
+    /**
+     * Testet das Lesen eines Videos anhand der ID.
+     * Abhängig von erfolgreichem createVideo().
+     */
     @Test(priority = 2, dependsOnMethods = "createVideo", description = "Fetch video by id")
     public void readVideo() {
         repository.save(sample);
@@ -136,6 +154,10 @@ public class VideoServiceTest {
         assertEquals(result.get().getTitle(), sample.getTitle());
     }
 
+    /**
+     * Testet das Aktualisieren eines vorhandenen Videos.
+     * Abhängig von erfolgreichem readVideo().
+     */
     @Test(priority = 3, dependsOnMethods = "readVideo", description = "Update video")
     public void updateVideo() {
         repository.save(sample);
@@ -144,6 +166,10 @@ public class VideoServiceTest {
         assertEquals(result.getGenre(), "Action");
     }
 
+    /**
+     * Testet das Löschen eines Videos anhand seiner ID.
+     * Abhängig von erfolgreichem updateVideo().
+     */
     @Test(priority = 4, dependsOnMethods = "updateVideo", description = "Delete video")
     public void deleteVideo() {
         repository.save(sample);

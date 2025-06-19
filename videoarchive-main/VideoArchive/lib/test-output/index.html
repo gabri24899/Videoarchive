@@ -160,7 +160,7 @@
                   </a> <!-- testSomeLibraryMethod -->
                   <span class="method-name">testSomeLibraryMethod</span>
                   <em>
-(Verify someLibraryMethod returns true)                  </em>
+(Prüft, ob someLibraryMethod true zurückliefert)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -177,7 +177,7 @@
                   </a> <!-- demoTest -->
                   <span class="method-name">demoTest</span>
                   <em>
-(Simple demo test)                  </em>
+(Einfacher Demo-Test)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -187,7 +187,7 @@
                   <span class="method-name">parameterizedTest</span>
                   <span class="parameters">(Hello TestNG)</span>
                   <em>
-(Parameterized test using @Parameters)                  </em>
+(Parametrisierter Test mit Übergabe aus testng.xml)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -347,22 +347,22 @@ data.setCell(0, 3, 8);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testUpdatePersonNotFound')
 data.setCell(1, 2, 'fh.aalen.test.PersonServiceTest')
-data.setCell(1, 3, 4);
+data.setCell(1, 3, 2);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testSomeLibraryMethod')
 data.setCell(2, 2, 'fh.aalen.test.LibraryTest')
 data.setCell(2, 3, 2);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'demoTest')
-data.setCell(3, 2, 'fh.aalen.test.TestLifecycleDemo')
-data.setCell(3, 3, 2);
+data.setCell(3, 1, 'testAddPerson')
+data.setCell(3, 2, 'fh.aalen.test.PersonServiceTest')
+data.setCell(3, 3, 1);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testAddPerson')
-data.setCell(4, 2, 'fh.aalen.test.PersonServiceTest')
+data.setCell(4, 1, 'createVideo')
+data.setCell(4, 2, 'fh.aalen.test.VideoServiceTest')
 data.setCell(4, 3, 1);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'createVideo')
-data.setCell(5, 2, 'fh.aalen.test.VideoServiceTest')
+data.setCell(5, 1, 'demoTest')
+data.setCell(5, 2, 'fh.aalen.test.TestLifecycleDemo')
 data.setCell(5, 3, 1);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'parameterizedTest')
@@ -372,7 +372,7 @@ window.suiteTableData['VideoArchiveSuite']= { tableData: data, tableDiv: 'times-
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 ms</span>
+              <span class="suite-total-time">Total running time: 16 ms</span>
               <div id="times-div-VideoArchiveSuite">
               </div> <!-- times-div-VideoArchiveSuite -->
             </div> <!-- times-div -->
@@ -426,7 +426,7 @@ return data;
               <div class="chronological-class-name">fh.aalen.test.PersonServiceTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">39 ms</span>
+                <span class="method-start">38 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testAddPerson(Mueller, 1990-01-01)</span>
@@ -434,7 +434,7 @@ return data;
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">68 ms</span>
+                <span class="method-start">69 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testAddPerson(Schmidt, 1980-12-31)</span>
@@ -442,79 +442,79 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testUpdatePersonNotFound</span>
-                <span class="method-start">78 ms</span>
+                <span class="method-start">77 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">78 ms</span>
+                <span class="method-start">77 ms</span>
               </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">fh.aalen.test.VideoServiceTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">87 ms</span>
+                <span class="method-start">83 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createVideo</span>
-                <span class="method-start">89 ms</span>
+                <span class="method-start">85 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">fh.aalen.test.TestLifecycleDemo</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">152 ms</span>
+                <span class="method-start">137 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">153 ms</span>
+                <span class="method-start">138 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">155 ms</span>
+                <span class="method-start">140 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">parameterizedTest(Hello TestNG)</span>
-                <span class="method-start">156 ms</span>
+                <span class="method-start">141 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">158 ms</span>
+                <span class="method-start">144 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">159 ms</span>
+                <span class="method-start">145 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">demoTest</span>
-                <span class="method-start">160 ms</span>
+                <span class="method-start">146 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">163 ms</span>
+                <span class="method-start">149 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">164 ms</span>
+                <span class="method-start">150 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">fh.aalen.test.LibraryTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testSomeLibraryMethod</span>
-                <span class="method-start">165 ms</span>
+                <span class="method-start">151 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">fh.aalen.test.TestLifecycleDemo</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">168 ms</span>
+                <span class="method-start">155 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">173 ms</span>
+                <span class="method-start">160 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

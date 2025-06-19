@@ -1,22 +1,41 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!-- Diese Zeile deklariert die TestNG-DTD und zeigt an, dass es sich um eine TestNG-Konfigurationsdatei handelt -->
+
 <suite name="VideoArchiveSuite">
+    <!-- Eine Testsuite mit dem Namen "VideoArchiveSuite", sie enthält mehrere Tests -->
+
     <test name="ServiceTest">
+        <!-- Erster Testblock mit dem Namen "ServiceTest" -->
+
         <groups>
             <run>
                 <include name="crud"/>
+                <!-- Es werden nur Testmethoden ausgeführt, die zur Gruppe "crud" gehören -->
+                <!-- Vorteil: Wir können Tests thematisch gruppieren (z. B. nur CRUD-Tests) -->
             </run>
         </groups>
+
         <classes>
+            <!-- Hier wird angegeben, welche Testklassen im Rahmen dieses Tests ausgeführt werden -->
             <class name="fh.aalen.test.PersonServiceTest"/>
             <class name="fh.aalen.test.VideoServiceTest"/>
             <class name="fh.aalen.test.SimpleTest"/>
+            <!-- Diese drei Testklassen enthalten Testmethoden zur Person-, Video-Verwaltung und einfache Demos -->
         </classes>
     </test>
+
     <test name="DemoTests">
+        <!-- Zweiter Testblock mit dem Namen "DemoTests" -->
+
         <parameter name="greeting" value="Hello TestNG"/>
+        <!-- Es wird ein Parameter "greeting" definiert, der an Testmethoden übergeben werden kann -->
+        <!-- Dies ist nützlich für konfigurierbare Tests oder zur Wiederverwendung -->
+
         <classes>
             <class name="fh.aalen.test.TestLifecycleDemo"/>
             <class name="fh.aalen.test.LibraryTest"/>
+            <!-- Diese Klassen demonstrieren grundlegende TestNG-Funktionen wie Lifecycle-Methoden und Parameterübergabe -->
         </classes>
     </test>
+
 </suite>
