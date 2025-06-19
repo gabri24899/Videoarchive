@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-06-19T13:31:22 MESZ" name="VideoArchiveSuite" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="158">
+    <groups>
+      <group name="crud">
+        <method signature="PersonServiceTest.testAddPerson(java.lang.String,java.time.LocalDate)[pri:0, instance:fh.aalen.test.PersonServiceTest@62e7f11d]" name="testAddPerson" class="fh.aalen.test.PersonServiceTest"/>
+        <method signature="PersonServiceTest.testUpdatePersonNotFound()[pri:0, instance:fh.aalen.test.PersonServiceTest@62e7f11d]" name="testUpdatePersonNotFound" class="fh.aalen.test.PersonServiceTest"/>
+        <method signature="VideoServiceTest.createVideo()[pri:1, instance:fh.aalen.test.VideoServiceTest@1ba9117e]" name="createVideo" class="fh.aalen.test.VideoServiceTest"/>
+      </group> <!-- crud -->
+      <group name="demo">
+        <method signature="TestLifecycleDemo.demoTest()[pri:1, instance:fh.aalen.test.TestLifecycleDemo@35aea049]" name="demoTest" class="fh.aalen.test.TestLifecycleDemo"/>
+      </group> <!-- demo -->
+    </groups>
+    <test started-at="2025-06-19T13:31:22 MESZ" name="ServiceTest" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="81">
+      <class name="fh.aalen.test.VideoServiceTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:fh.aalen.test.VideoServiceTest@1ba9117e]" started-at="2025-06-19T13:31:22 MESZ" name="setup" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="createVideo()[pri:1, instance:fh.aalen.test.VideoServiceTest@1ba9117e]" started-at="2025-06-19T13:31:22 MESZ" name="createVideo" description="Add video and verify repository call" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createVideo -->
+      </class> <!-- fh.aalen.test.VideoServiceTest -->
+      <class name="fh.aalen.test.PersonServiceTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:fh.aalen.test.PersonServiceTest@62e7f11d]" started-at="2025-06-19T13:31:22 MESZ" name="setup" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testAddPerson(java.lang.String,java.time.LocalDate)[pri:0, instance:fh.aalen.test.PersonServiceTest@62e7f11d]" started-at="2025-06-19T13:31:22 MESZ" name="testAddPerson" description="Verify addPerson saves entity" data-provider="personData" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Mueller]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1990-01-01]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddPerson -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:fh.aalen.test.PersonServiceTest@62e7f11d]" started-at="2025-06-19T13:31:22 MESZ" name="setup" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testAddPerson(java.lang.String,java.time.LocalDate)[pri:0, instance:fh.aalen.test.PersonServiceTest@62e7f11d]" started-at="2025-06-19T13:31:22 MESZ" name="testAddPerson" description="Verify addPerson saves entity" data-provider="personData" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Schmidt]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1980-12-31]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddPerson -->
+        <test-method signature="testUpdatePersonNotFound()[pri:0, instance:fh.aalen.test.PersonServiceTest@62e7f11d]" started-at="2025-06-19T13:31:22 MESZ" name="testUpdatePersonNotFound" description="Expect exception when updating unknown person" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="4" status="PASS">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Person nicht gefunden]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Person nicht gefunden
+at fh.aalen.person.PersonService.lambda$1(PersonService.java:31)
+at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+at fh.aalen.person.PersonService.updatePerson(PersonService.java:31)
+at fh.aalen.test.PersonServiceTest.testUpdatePersonNotFound(PersonServiceTest.java:143)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdatePersonNotFound -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:fh.aalen.test.PersonServiceTest@62e7f11d]" started-at="2025-06-19T13:31:22 MESZ" name="setup" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+      </class> <!-- fh.aalen.test.PersonServiceTest -->
+    </test> <!-- ServiceTest -->
+    <test started-at="2025-06-19T13:31:22 MESZ" name="DemoTests" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="18">
+      <class name="fh.aalen.test.LibraryTest">
+        <test-method signature="testSomeLibraryMethod()[pri:0, instance:fh.aalen.test.LibraryTest@7205765b]" started-at="2025-06-19T13:31:22 MESZ" name="testSomeLibraryMethod" description="Verify someLibraryMethod returns true" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSomeLibraryMethod -->
+      </class> <!-- fh.aalen.test.LibraryTest -->
+      <class name="fh.aalen.test.TestLifecycleDemo">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:fh.aalen.test.TestLifecycleDemo@35aea049]" started-at="2025-06-19T13:31:22 MESZ" name="beforeSuite" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:fh.aalen.test.TestLifecycleDemo@35aea049]" started-at="2025-06-19T13:31:22 MESZ" name="beforeTest" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:fh.aalen.test.TestLifecycleDemo@35aea049]" started-at="2025-06-19T13:31:22 MESZ" name="beforeClass" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:fh.aalen.test.TestLifecycleDemo@35aea049]" started-at="2025-06-19T13:31:22 MESZ" name="beforeMethod" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="parameterizedTest(java.lang.String)[pri:0, instance:fh.aalen.test.TestLifecycleDemo@35aea049]" started-at="2025-06-19T13:31:22 MESZ" name="parameterizedTest" description="Parameterized test using @Parameters" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Hello TestNG]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- parameterizedTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:fh.aalen.test.TestLifecycleDemo@35aea049]" started-at="2025-06-19T13:31:22 MESZ" name="afterMethod" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:fh.aalen.test.TestLifecycleDemo@35aea049]" started-at="2025-06-19T13:31:22 MESZ" name="beforeMethod" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="demoTest()[pri:1, instance:fh.aalen.test.TestLifecycleDemo@35aea049]" started-at="2025-06-19T13:31:22 MESZ" name="demoTest" description="Simple demo test" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demoTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:fh.aalen.test.TestLifecycleDemo@35aea049]" started-at="2025-06-19T13:31:22 MESZ" name="afterMethod" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:fh.aalen.test.TestLifecycleDemo@35aea049]" started-at="2025-06-19T13:31:22 MESZ" name="afterClass" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:fh.aalen.test.TestLifecycleDemo@35aea049]" started-at="2025-06-19T13:31:22 MESZ" name="afterTest" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:fh.aalen.test.TestLifecycleDemo@35aea049]" started-at="2025-06-19T13:31:22 MESZ" name="afterSuite" finished-at="2025-06-19T13:31:22 MESZ" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- fh.aalen.test.TestLifecycleDemo -->
+    </test> <!-- DemoTests -->
+  </suite> <!-- VideoArchiveSuite -->
+</testng-results>
