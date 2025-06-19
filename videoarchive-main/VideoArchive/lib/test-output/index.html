@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-VideoArchiveSuite" class="navigator-link">
-              <span class="suite-name border-passed">VideoArchiveSuite</span>
+              <span class="suite-name border-failed">VideoArchiveSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,35 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,   7 passed</span>
+                    <span class="method-stats">9 methods, 1 failed,  1 skipped,  7 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-VideoArchiveSuite" class="hide-methods failed suite-VideoArchiveSuite"> (hide)</a> <!-- hide-methods failed suite-VideoArchiveSuite -->
+                      <a href="#" panel-name="suite-VideoArchiveSuite" class="show-methods failed suite-VideoArchiveSuite"> (show)</a> <!-- show-methods failed suite-VideoArchiveSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-VideoArchiveSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-VideoArchiveSuite" title="fh.aalen.test.FailureAndSkipTest" class="method navigator-link" hash-for-method="failingVideoTest">failingVideoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-VideoArchiveSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-VideoArchiveSuite" class="hide-methods skipped suite-VideoArchiveSuite"> (hide)</a> <!-- hide-methods skipped suite-VideoArchiveSuite -->
+                      <a href="#" panel-name="suite-VideoArchiveSuite" class="show-methods skipped suite-VideoArchiveSuite"> (show)</a> <!-- show-methods skipped suite-VideoArchiveSuite -->
+                    </span>
+                    <div class="method-list-content skipped suite-VideoArchiveSuite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-VideoArchiveSuite" title="fh.aalen.test.FailureAndSkipTest" class="method navigator-link" hash-for-method="skippedSearchFeatureTest">skippedSearchFeatureTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-VideoArchiveSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,12 +146,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-VideoArchiveSuite" title="fh.aalen.test.PersonServiceTest" class="method navigator-link" hash-for-method="testAddPerson(Schmidt, 1980-12-31)">testAddPerson(Schmidt, 1980-12-31)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-VideoArchiveSuite" title="fh.aalen.test.PersonServiceTest" class="method navigator-link" hash-for-method="testAddPerson(Mueller, 1990-01-01)">testAddPerson(Mueller, 1990-01-01)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-VideoArchiveSuite" title="fh.aalen.test.PersonServiceTest" class="method navigator-link" hash-for-method="testAddPerson(Mueller, 1990-01-01)">testAddPerson(Mueller, 1990-01-01)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-VideoArchiveSuite" title="fh.aalen.test.PersonServiceTest" class="method navigator-link" hash-for-method="testAddPerson(Schmidt, 1980-12-31)">testAddPerson(Schmidt, 1980-12-31)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -148,6 +176,50 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-VideoArchiveSuite" class="panel VideoArchiveSuite">
+          <div class="suite-VideoArchiveSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">fh.aalen.test.FailureAndSkipTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="failingVideoTest">
+                  </a> <!-- failingVideoTest -->
+                  <span class="method-name">failingVideoTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: Titles should not match expected [Star Wars] but found [Blade Runner]
+	at fh.aalen.test.FailureAndSkipTest.failingVideoTest(FailureAndSkipTest.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Failing test using the Video domain object)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-VideoArchiveSuite-class-failed -->
+          <div class="suite-VideoArchiveSuite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">fh.aalen.test.FailureAndSkipTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="skippedSearchFeatureTest">
+                  </a> <!-- skippedSearchFeatureTest -->
+                  <span class="method-name">skippedSearchFeatureTest</span>
+                  <div class="stack-trace">org.testng.SkipException: Search by rating not implemented yet
+	at fh.aalen.test.FailureAndSkipTest.skippedSearchFeatureTest(FailureAndSkipTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Skipped test referencing a future video feature)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-VideoArchiveSuite-class-skipped -->
           <div class="suite-VideoArchiveSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -217,20 +289,20 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testAddPerson(Schmidt, 1980-12-31)">
-                  </a> <!-- testAddPerson(Schmidt, 1980-12-31) -->
+                  <a name="testAddPerson(Mueller, 1990-01-01)">
+                  </a> <!-- testAddPerson(Mueller, 1990-01-01) -->
                   <span class="method-name">testAddPerson</span>
-                  <span class="parameters">(Schmidt,1980-12-31)</span>
+                  <span class="parameters">(Mueller,1990-01-01)</span>
                   <em>
 (Verify addPerson saves entity)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testAddPerson(Mueller, 1990-01-01)">
-                  </a> <!-- testAddPerson(Mueller, 1990-01-01) -->
+                  <a name="testAddPerson(Schmidt, 1980-12-31)">
+                  </a> <!-- testAddPerson(Schmidt, 1980-12-31) -->
                   <span class="method-name">testAddPerson</span>
-                  <span class="parameters">(Mueller,1990-01-01)</span>
+                  <span class="parameters">(Schmidt,1980-12-31)</span>
                   <em>
 (Verify addPerson saves entity)                  </em>
                 </div> <!-- method-content -->
@@ -273,6 +345,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;fh.aalen.test.TestLifecycleDemo&quot;/&gt;
       &lt;class name=&quot;fh.aalen.test.LibraryTest&quot;/&gt;
+      &lt;class name=&quot;fh.aalen.test.FailureAndSkipTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- DemoTests --&gt;
 &lt;/suite&gt; &lt;!-- VideoArchiveSuite --&gt;
@@ -289,7 +362,7 @@
                 <span class="test-name">ServiceTest (3 classes)</span>
               </li>
               <li>
-                <span class="test-name">DemoTests (2 classes)</span>
+                <span class="test-name">DemoTests (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -339,40 +412,48 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(9);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testAddPerson')
 data.setCell(0, 2, 'fh.aalen.test.PersonServiceTest')
-data.setCell(0, 3, 8);
+data.setCell(0, 3, 9);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testUpdatePersonNotFound')
-data.setCell(1, 2, 'fh.aalen.test.PersonServiceTest')
-data.setCell(1, 3, 2);
+data.setCell(1, 1, 'failingVideoTest')
+data.setCell(1, 2, 'fh.aalen.test.FailureAndSkipTest')
+data.setCell(1, 3, 4);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testSomeLibraryMethod')
-data.setCell(2, 2, 'fh.aalen.test.LibraryTest')
+data.setCell(2, 1, 'testUpdatePersonNotFound')
+data.setCell(2, 2, 'fh.aalen.test.PersonServiceTest')
 data.setCell(2, 3, 2);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testAddPerson')
-data.setCell(3, 2, 'fh.aalen.test.PersonServiceTest')
-data.setCell(3, 3, 1);
+data.setCell(3, 1, 'createVideo')
+data.setCell(3, 2, 'fh.aalen.test.VideoServiceTest')
+data.setCell(3, 3, 2);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'createVideo')
-data.setCell(4, 2, 'fh.aalen.test.VideoServiceTest')
-data.setCell(4, 3, 1);
+data.setCell(4, 1, 'testAddPerson')
+data.setCell(4, 2, 'fh.aalen.test.PersonServiceTest')
+data.setCell(4, 3, 2);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'demoTest')
-data.setCell(5, 2, 'fh.aalen.test.TestLifecycleDemo')
-data.setCell(5, 3, 1);
+data.setCell(5, 1, 'testSomeLibraryMethod')
+data.setCell(5, 2, 'fh.aalen.test.LibraryTest')
+data.setCell(5, 3, 2);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'parameterizedTest')
 data.setCell(6, 2, 'fh.aalen.test.TestLifecycleDemo')
-data.setCell(6, 3, 1);
+data.setCell(6, 3, 2);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'demoTest')
+data.setCell(7, 2, 'fh.aalen.test.TestLifecycleDemo')
+data.setCell(7, 3, 1);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'skippedSearchFeatureTest')
+data.setCell(8, 2, 'fh.aalen.test.FailureAndSkipTest')
+data.setCell(8, 3, 1);
 window.suiteTableData['VideoArchiveSuite']= { tableData: data, tableDiv: 'times-div-VideoArchiveSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 ms</span>
+              <span class="suite-total-time">Total running time: 25 ms</span>
               <div id="times-div-VideoArchiveSuite">
               </div> <!-- times-div-VideoArchiveSuite -->
             </div> <!-- times-div -->
@@ -426,95 +507,108 @@ return data;
               <div class="chronological-class-name">fh.aalen.test.PersonServiceTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">38 ms</span>
+                <span class="method-start">50 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testAddPerson(Mueller, 1990-01-01)</span>
-                <span class="method-start">57 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">69 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testAddPerson(Schmidt, 1980-12-31)</span>
                 <span class="method-start">70 ms</span>
               </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testUpdatePersonNotFound</span>
-                <span class="method-start">77 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">77 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">fh.aalen.test.VideoServiceTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
                 <span class="method-start">83 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <span class="method-name">testAddPerson(Schmidt, 1980-12-31)</span>
+                <span class="method-start">84 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">91 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testUpdatePersonNotFound</span>
+                <span class="method-start">92 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">fh.aalen.test.VideoServiceTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">97 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
                 <span class="method-name">createVideo</span>
-                <span class="method-start">85 ms</span>
+                <span class="method-start">98 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">fh.aalen.test.TestLifecycleDemo</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">137 ms</span>
+                <span class="method-start">151 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">138 ms</span>
+                <span class="method-start">152 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">140 ms</span>
+                <span class="method-start">154 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">parameterizedTest(Hello TestNG)</span>
-                <span class="method-start">141 ms</span>
+                <span class="method-start">154 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">144 ms</span>
+                <span class="method-start">157 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">145 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">demoTest</span>
-                <span class="method-start">146 ms</span>
+                <span class="method-start">159 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">159 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">149 ms</span>
+                <span class="method-start">161 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">150 ms</span>
+                <span class="method-start">162 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">fh.aalen.test.LibraryTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testSomeLibraryMethod</span>
-                <span class="method-start">151 ms</span>
+                <span class="method-start">162 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">fh.aalen.test.FailureAndSkipTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">failingVideoTest</span>
+                <span class="method-start">165 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">skippedSearchFeatureTest</span>
+                <span class="method-start">171 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">fh.aalen.test.TestLifecycleDemo</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">155 ms</span>
+                <span class="method-start">173 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">160 ms</span>
+                <span class="method-start">183 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

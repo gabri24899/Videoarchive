@@ -20,6 +20,7 @@
             <class name="fh.aalen.test.PersonServiceTest"/>
             <class name="fh.aalen.test.VideoServiceTest"/>
             <class name="fh.aalen.test.SimpleTest"/>
+            
             <!-- Diese drei Testklassen enthalten Testmethoden zur Person-, Video-Verwaltung und einfache Demos -->
         </classes>
     </test>
@@ -34,6 +35,7 @@
         <classes>
             <class name="fh.aalen.test.TestLifecycleDemo"/>
             <class name="fh.aalen.test.LibraryTest"/>
+            <class name="fh.aalen.test.FailureAndSkipTest"/>
             <!-- Diese Klassen demonstrieren grundlegende TestNG-Funktionen wie Lifecycle-Methoden und Parameterübergabe -->
         </classes>
     </test>

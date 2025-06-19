@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [VideoArchiveSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="DemoTests(failed)">
+    <parameter name="greeting" value="Hello TestNG"/>
+    <classes>
+      <class name="fh.aalen.test.FailureAndSkipTest">
+        <methods>
+          <include name="skippedSearchFeatureTest"/>
+          <include name="failingVideoTest"/>
+        </methods>
+      </class> <!-- fh.aalen.test.FailureAndSkipTest -->
+    </classes>
+  </test> <!-- DemoTests(failed) -->
+</suite> <!-- Failed suite [VideoArchiveSuite] -->
