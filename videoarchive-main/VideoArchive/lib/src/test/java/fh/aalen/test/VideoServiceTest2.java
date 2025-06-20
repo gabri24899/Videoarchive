@@ -3,6 +3,7 @@ package fh.aalen.test;
 
 import static org.testng.Assert.assertEquals;
 
+
 import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
 
@@ -10,6 +11,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -18,7 +20,7 @@ import fh.aalen.person.*;
 import fh.aalen.video.*;
 
 @SpringBootTest (classes = fh.aalen.Anwendung.class)
-public class VideoServiceTest2 {
+public class VideoServiceTest2 extends AbstractTestNGSpringContextTests {
 
     @Autowired
     private VideoService videoService;

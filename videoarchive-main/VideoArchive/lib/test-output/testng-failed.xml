@@ -5,8 +5,12 @@
     <classes>
       <class name="fh.aalen.test.VideoServiceTest2">
         <methods>
-          <include name="testAddAndGetVideo"/>
           <include name="testAddAndGetVideoFail"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextAfterTestMethod"/>
           <include name="setup"/>
         </methods>
       </class> <!-- fh.aalen.test.VideoServiceTest2 -->
