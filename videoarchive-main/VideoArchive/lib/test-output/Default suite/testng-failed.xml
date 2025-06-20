@@ -7,11 +7,14 @@
         <methods>
           <include name="testAddAndGetVideoFail"/>
           <include name="springTestContextBeforeTestClass"/>
+          <include name="afterEachTest"/>
           <include name="springTestContextBeforeTestMethod"/>
-          <include name="springTestContextAfterTestClass"/>
           <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
           <include name="springTestContextAfterTestMethod"/>
+          <include name="beforeEntireSuite"/>
           <include name="setup"/>
+          <include name="afterEntireSuite"/>
         </methods>
       </class> <!-- fh.aalen.test.VideoServiceTest2 -->
     </classes>
