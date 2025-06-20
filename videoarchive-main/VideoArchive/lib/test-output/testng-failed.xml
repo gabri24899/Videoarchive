@@ -8,8 +8,8 @@
           <include name="testAddAndGetVideoFail"/>
           <include name="springTestContextBeforeTestClass"/>
           <include name="springTestContextBeforeTestMethod"/>
-          <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestMethod"/>
           <include name="setup"/>
         </methods>

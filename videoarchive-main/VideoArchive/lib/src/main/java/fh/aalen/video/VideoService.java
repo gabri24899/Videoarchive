@@ -3,6 +3,8 @@ package fh.aalen.video;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import jakarta.annotation.PostConstruct;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,6 +24,13 @@ public class VideoService {
 
     @Autowired
     private VideoRepository repository;
+    
+    @PostConstruct
+    private void initVideoList() {
+        if (repository.count() == 0) {
+            repository.saveAll(videolist);
+        }
+    }
 
     public Iterable<Video> getAllVideos() {
         return repository.findAll();
