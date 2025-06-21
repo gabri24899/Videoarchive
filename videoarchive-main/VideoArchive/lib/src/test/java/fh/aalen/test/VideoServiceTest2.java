@@ -19,7 +19,6 @@ import fh.aalen.video.Video;
 import fh.aalen.video.VideoRepository;
 import fh.aalen.video.VideoService;
 
-// @Ignore  möglich bei
 @Listeners(DotTestListener.class)
 @ActiveProfiles("test")
 @SpringBootTest(classes = Anwendung.class)
@@ -34,36 +33,16 @@ public class VideoServiceTest2 extends AbstractTestNGSpringContextTests {
     private VideoRepository videoRepository;
 
     Video latestVideo;
-    
-    
-    
-    
-    
-    
-    
-    @BeforeSuite (alwaysRun = true)
+
+    @BeforeSuite(alwaysRun = true)
     public static void beforeSuite() {
-    	
         log.info("🚀 Start der Test-Suite (GlobalSuiteLogger)");
     }
 
-    @AfterSuite (alwaysRun = true)
+    @AfterSuite(alwaysRun = true)
     public static void afterSuite() {
         log.info("🏁 Ende der Test-Suite (GlobalSuiteLogger)");
     }
-
-  
-
-    
-
- /*  
-    @BeforeMethod
-    public void setup() {
-        assertNotNull(videoRepository, "videoRepository wurde nicht injiziert!");
-        log.warn("⚠️ Datenbank wird vor dem Test geleert...");
-        videoRepository.deleteAll();
-    }
-   */ 
 
     @AfterMethod
     public void afterEachTest() {
@@ -73,12 +52,12 @@ public class VideoServiceTest2 extends AbstractTestNGSpringContextTests {
     @AfterClass
     public void cleanDatabaseAfterClass() throws InterruptedException {
         log.info("⏳ 30 Sekunden Zeit, um Datenbank zu prüfen...");
-        log.info("🔎 Jetzt H2-Konsole öffnen oder PostgreSQL abfragen (z. B. SELECT * FROM VIDEO;)");
+        log.info("🔎 Datenbank manuell inspizieren (z. B. SELECT * FROM VIDEO; in PostgreSQL)");
         Thread.sleep(30000);
         videoRepository.deleteAll();
         log.info("🧼 Datenbank geleert (alle Videos gelöscht).");
     }
-    @Ignore
+
     @Test(priority = 1, groups = {"crud"})
     public void testAddAndGetVideo() {
         Video video = new Video("Matrix", "16", "Cyberwelt", "SciFi");
@@ -100,10 +79,7 @@ public class VideoServiceTest2 extends AbstractTestNGSpringContextTests {
         log.info(" → Description: {}", created.getDescription());
         log.info(" → Genre: {}", created.getGenre());
 
-        log.info("🔎 Jetzt H2-Konsole öffnen: http://localhost:8080/h2-console");
-        log.info("→ JDBC URL: jdbc:h2:file:C:/Users/Manue/Desktop/Video-TestNG/Videoarchive/database/testdb");
-        log.info("→ User: sa | Passwort: <leer>");
-        log.info("⏳ 30 Sekunden Pause für H2-Check...");
+        log.info("⏳ 30 Sekunden Pause für manuelle Prüfung in PostgreSQL...");
         Thread.sleep(30000);
 
         Video update = new Video("Matrix Reloaded", "18", "Zweiter Teil", "Action");
@@ -119,8 +95,7 @@ public class VideoServiceTest2 extends AbstractTestNGSpringContextTests {
         log.info(" → Description: {}", found.get().getDescription());
         log.info(" → Genre: {}", found.get().getGenre());
 
-        log.info("🔎 Jetzt nochmal H2-Konsole prüfen: SELECT * FROM VIDEO;");
-        log.info("⏳ 30 Sekunden Pause nach Update...");
+        log.info("⏳ 30 Sekunden Pause nach Update für PostgreSQL-Prüfung...");
         Thread.sleep(30000);
 
         assertEquals(found.get().getTitle(), "Matrix Reloaded");
@@ -195,11 +170,4 @@ public class VideoServiceTest2 extends AbstractTestNGSpringContextTests {
         assertTrue(found.isPresent());
         assertEquals(found.get().getTitle(), "Spongebob");
     }
-    
-    @Ignore("Nur Demo – wird ignoriert")
-    @Test(priority = 99, groups = {"demo", "ignored"})
-    public void testWirdIgnoriert() {
-        log.info("Dieser Test wird NICHT ausgeführt.");
-    }
-
 }
