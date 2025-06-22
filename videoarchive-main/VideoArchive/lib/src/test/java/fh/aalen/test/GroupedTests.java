@@ -18,7 +18,7 @@ public class GroupedTests extends AbstractVideoTestBase {
     private static final Logger log = LoggerFactory.getLogger(GroupedTests.class);
     
     @BeforeSuite(alwaysRun = true)
-    public void beforeEntireSuite() throws InterruptedException {
+    public void beforeEntireSuite()  {
         log.info("🚀 Test-Suite beginnt (BeforeSuite)");
        
     }

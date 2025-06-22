@@ -4,6 +4,7 @@ import static org.testng.Assert.*;
 
 
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterClass;
@@ -26,6 +27,7 @@ public class SimpleTestExample extends AbstractVideoTestBase {
         Thread.sleep(5000); // kurze Pause für Präsentation
         assertEquals(savedVideo.getTitle(), "Matrix");
         assertNotNull(savedVideo.getId());
+        assertTrue(savedVideo.getGenre().equals("SciFi"));
     }
     
     @Test
@@ -39,6 +41,7 @@ public class SimpleTestExample extends AbstractVideoTestBase {
     
     @BeforeClass 
     public void videoInitalisation  () throws InterruptedException {
+    	 log.info("\n\nStart der Testklasse \n");
     	videoService.getAllVideos();
     	Thread.sleep(5000);
     	
@@ -46,7 +49,7 @@ public class SimpleTestExample extends AbstractVideoTestBase {
     
    @AfterClass
     public void beforeClass() throws InterruptedException {
-        log.info("📦 Start der Testklasse");
+        log.info("\n\n Löschen der DB Einträge \n");
         
         videoRepository.deleteAll(); 
     }
@@ -56,6 +59,7 @@ public class SimpleTestExample extends AbstractVideoTestBase {
        log.info("\n\n Der aktuelle Test : {}", method.getName() + " Wird Ausgeführt \n");
        Thread.sleep(2000); // kurze Pause zur Hervorhebung
    }
+   
 
 
    
