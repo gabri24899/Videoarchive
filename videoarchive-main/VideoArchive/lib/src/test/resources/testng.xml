@@ -9,13 +9,12 @@
         <groups>
             <run>
                 <include name="crud"/>
-                <include name="dataprovider"/>
-                <include name="negative"/>
-                <include name="demo"/>
+                
             </run>
         </groups>
         <classes>
-            <class name="fh.aalen.test.VideoServiceTest2"/>
+          
+  			  <class name="fh.aalen.test.GroupedTests"/>
         </classes>
     </test>
 </suite>

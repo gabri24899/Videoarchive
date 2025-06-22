@@ -57,8 +57,18 @@ public class VideoServiceTest2 extends AbstractTestNGSpringContextTests {
         videoRepository.deleteAll();
         log.info("🧼 Datenbank geleert (alle Videos gelöscht).");
     }
+    
+    
+    @Test
+    public void AddVideoTest () {
+    	Video testVideo = new Video("Matrix", "16", "Cyberwelt", "SciFi");
+    	Video savedVideo = videoService.addVideo(testVideo);
+    	assertEquals(savedVideo.getTitle(), "Matrix");
+    	 assertNotNull(savedVideo.getId());
+    	 assertTrue(savedVideo.getGenre().equals("SciFi"));
+    }
 
-    @Test(priority = 1, groups = {"crud"})
+    @Test(priority = 1)
     public void testAddAndGetVideo() {
         Video video = new Video("Matrix", "16", "Cyberwelt", "SciFi");
         latestVideo = videoService.addVideo(video);
@@ -68,22 +78,21 @@ public class VideoServiceTest2 extends AbstractTestNGSpringContextTests {
         assertEquals(found.get().getTitle(), "Matrix");
     }
 
-    @Test(priority = 2, groups = {"crud"})
+    @Test(priority = 2, dependsOnMethods = {"testAddAndGetVideo"})
     public void testUpdateVideo() throws InterruptedException {
-        Video created = videoService.addVideo(new Video("Matrix", "16", "Cyberwelt", "SciFi"));
-
         log.info("✅ Vor Update:");
-        log.info(" → ID: {}", created.getId());
-        log.info(" → Title: {}", created.getTitle());
-        log.info(" → Age Rating: {}", created.getAge_rating());
-        log.info(" → Description: {}", created.getDescription());
-        log.info(" → Genre: {}", created.getGenre());
+        log.info(" → ID: {}", latestVideo.getId());
+        log.info(" → Title: {}", latestVideo.getTitle());
+        log.info(" → Age Rating: {}", latestVideo.getAge_rating());
+        log.info(" → Description: {}", latestVideo.getDescription());
+        log.info(" → Genre: {}", latestVideo.getGenre());
 
         log.info("⏳ 30 Sekunden Pause für manuelle Prüfung in PostgreSQL...");
         Thread.sleep(30000);
 
         Video update = new Video("Matrix Reloaded", "18", "Zweiter Teil", "Action");
-        Video updated = videoService.updateVideo(created.getId(), update);
+        Video updated = videoService.updateVideo(latestVideo.getId(), update);
+        latestVideo = updated;
 
         Optional<Video> found = videoService.getVideoById(updated.getId());
         assertTrue(found.isPresent());
@@ -98,23 +107,20 @@ public class VideoServiceTest2 extends AbstractTestNGSpringContextTests {
         log.info("⏳ 30 Sekunden Pause nach Update für PostgreSQL-Prüfung...");
         Thread.sleep(30000);
 
-        assertEquals(found.get().getTitle(), "Matrix Reloaded");
+        assertEquals(found.get().getTitle(), "Matrix Reloaded"); // "Interstellar"  "Matrix Reloaded" zum test für depends
         assertEquals(found.get().getAge_rating(), "18");
         assertEquals(found.get().getDescription(), "Zweiter Teil");
         assertEquals(found.get().getGenre(), "Action");
     }
 
-    @Test(priority = 3, groups = {"crud"})
+    @Test(priority = 3, dependsOnMethods = {"testUpdateVideo"})
     public void testDeleteVideo() throws InterruptedException {
-        Video video = new Video("Zum Löschen", "12", "Testvideo", "Test");
-        Video saved = videoService.addVideo(video);
-
-        log.info("✅ Video gespeichert: ID = {}", saved.getId());
+        log.info("✅ Video gespeichert: ID = {}", latestVideo.getId());
         log.info("⏳ 30 Sekunden Pause vor dem Löschen...");
         Thread.sleep(30000);
 
-        videoService.deleteVideo(saved.getId());
-        Optional<Video> found = videoService.getVideoById(saved.getId());
+        videoService.deleteVideo(latestVideo.getId());
+        Optional<Video> found = videoService.getVideoById(latestVideo.getId());
 
         log.info("🗑️ Video gelöscht.");
         log.info("⏳ 30 Sekunden Pause nach dem Löschen...");
@@ -123,7 +129,7 @@ public class VideoServiceTest2 extends AbstractTestNGSpringContextTests {
         assertTrue(found.isEmpty(), "Das Video sollte nach dem Löschen nicht mehr vorhanden sein");
     }
 
-    @Test(priority = 4, groups = {"crud"})
+    @Test(priority = 4)
     public void testGetAllVideos() throws InterruptedException {
         int initialSize = (int) videoService.getAllVideos().spliterator().getExactSizeIfKnown();
         log.info("📊 Anzahl Videos vorhin: {}", initialSize);

@@ -1,21 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-20T22:18:38 MESZ" name="Default suite" finished-at="2025-06-20T22:18:38 MESZ" duration-ms="13">
+  <suite started-at="2025-06-22T17:27:58 MESZ" name="VideoServiceSuite" finished-at="2025-06-22T17:28:30 MESZ" duration-ms="32647">
     <groups>
+      <group name="crud">
+        <method signature="GroupedTests.testCreateVideo()[pri:1, instance:fh.aalen.test.GroupedTests@340b9973]" name="testCreateVideo" class="fh.aalen.test.GroupedTests"/>
+        <method signature="GroupedTests.testReadVideoById()[pri:2, instance:fh.aalen.test.GroupedTests@340b9973]" name="testReadVideoById" class="fh.aalen.test.GroupedTests"/>
+        <method signature="GroupedTests.testGetAllVideos()[pri:3, instance:fh.aalen.test.GroupedTests@340b9973]" name="testGetAllVideos" class="fh.aalen.test.GroupedTests"/>
+        <method signature="GroupedTests.testUpdateVideo()[pri:4, instance:fh.aalen.test.GroupedTests@340b9973]" name="testUpdateVideo" class="fh.aalen.test.GroupedTests"/>
+        <method signature="GroupedTests.testDeleteVideo()[pri:5, instance:fh.aalen.test.GroupedTests@340b9973]" name="testDeleteVideo" class="fh.aalen.test.GroupedTests"/>
+      </group> <!-- crud -->
     </groups>
-    <test started-at="2025-06-20T22:18:38 MESZ" name="Default test" finished-at="2025-06-20T22:18:38 MESZ" duration-ms="13">
-      <class name="fh.aalen.test.VideoServiceTest2">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:fh.aalen.test.VideoServiceTest2@59f63e24]" started-at="2025-06-20T22:18:38 MESZ" name="beforeSuite" finished-at="2025-06-20T22:18:38 MESZ" duration-ms="12" status="PASS">
+    <test started-at="2025-06-22T17:27:58 MESZ" name="AlleGruppenAusführen" finished-at="2025-06-22T17:28:30 MESZ" duration-ms="32647">
+      <class name="fh.aalen.test.GroupedTests">
+        <test-method is-config="true" signature="beforeEntireSuite()[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:27:58 MESZ" name="beforeEntireSuite" finished-at="2025-06-22T17:27:58 MESZ" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:fh.aalen.test.VideoServiceTest2@59f63e24]" started-at="2025-06-20T22:18:38 MESZ" name="afterSuite" finished-at="2025-06-20T22:18:38 MESZ" duration-ms="0" status="PASS">
+        </test-method> <!-- beforeEntireSuite -->
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:27:58 MESZ" name="springTestContextBeforeTestClass" finished-at="2025-06-22T17:27:58 MESZ" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- fh.aalen.test.VideoServiceTest2 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:27:58 MESZ" name="springTestContextPrepareTestInstance" finished-at="2025-06-22T17:28:02 MESZ" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="4003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method is-config="true" signature="videoInitialisation()[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:02 MESZ" name="videoInitialisation" finished-at="2025-06-22T17:28:07 MESZ" duration-ms="5032" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- videoInitialisation -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:07 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-22T17:28:07 MESZ" duration-ms="405" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void fh.aalen.test.GroupedTests.testCreateVideo() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method signature="testCreateVideo()[pri:1, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:07 MESZ" name="testCreateVideo" finished-at="2025-06-22T17:28:12 MESZ" duration-ms="5032" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateVideo -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:12 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-22T17:28:12 MESZ" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void fh.aalen.test.GroupedTests.testCreateVideo() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:12 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-22T17:28:12 MESZ" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void fh.aalen.test.GroupedTests.testReadVideoById() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method signature="testReadVideoById()[pri:2, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:12 MESZ" name="testReadVideoById" finished-at="2025-06-22T17:28:15 MESZ" depends-on-methods="fh.aalen.test.GroupedTests.testCreateVideo" duration-ms="3014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReadVideoById -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:15 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-22T17:28:15 MESZ" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void fh.aalen.test.GroupedTests.testReadVideoById() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:15 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-22T17:28:15 MESZ" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void fh.aalen.test.GroupedTests.testGetAllVideos() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method signature="testGetAllVideos()[pri:3, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:15 MESZ" name="testGetAllVideos" finished-at="2025-06-22T17:28:21 MESZ" depends-on-methods="fh.aalen.test.GroupedTests.testCreateVideo" duration-ms="6025" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllVideos -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:21 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-22T17:28:21 MESZ" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void fh.aalen.test.GroupedTests.testGetAllVideos() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:21 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-22T17:28:21 MESZ" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void fh.aalen.test.GroupedTests.testUpdateVideo() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method signature="testUpdateVideo()[pri:4, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:21 MESZ" name="testUpdateVideo" finished-at="2025-06-22T17:28:24 MESZ" depends-on-methods="fh.aalen.test.GroupedTests.testCreateVideo" duration-ms="3022" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateVideo -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:24 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-22T17:28:24 MESZ" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void fh.aalen.test.GroupedTests.testUpdateVideo() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:24 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-22T17:28:24 MESZ" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void fh.aalen.test.GroupedTests.testDeleteVideo() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method signature="testDeleteVideo()[pri:5, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:24 MESZ" name="testDeleteVideo" finished-at="2025-06-22T17:28:30 MESZ" depends-on-methods="fh.aalen.test.GroupedTests.testUpdateVideo" duration-ms="6029" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteVideo -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:30 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-22T17:28:30 MESZ" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void fh.aalen.test.GroupedTests.testDeleteVideo() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="cleanUpAfterClass()[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:30 MESZ" name="cleanUpAfterClass" finished-at="2025-06-22T17:28:30 MESZ" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUpAfterClass -->
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:30 MESZ" name="springTestContextAfterTestClass" finished-at="2025-06-22T17:28:30 MESZ" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+        <test-method is-config="true" signature="afterEntireSuite()[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:30 MESZ" name="afterEntireSuite" finished-at="2025-06-22T17:28:30 MESZ" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEntireSuite -->
+      </class> <!-- fh.aalen.test.GroupedTests -->
+    </test> <!-- AlleGruppenAusführen -->
+  </suite> <!-- VideoServiceSuite -->
 </testng-results>
