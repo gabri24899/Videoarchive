@@ -11,59 +11,66 @@ import org.testng.annotations.Test;
 
 import fh.aalen.video.Video;
 
-
 /**
  * Diese Klasse enthält zwei Data-Driven Testfälle:
- * 1. Einfache Tests mit verschiedenen Genres
- * 2. Komplexe Kombinationen aus mehreren Feldern (Titel, Rating, Beschreibung, Genre)
+ * 1. Gültige Genres → sollen erfolgreich gespeichert werden
+ * 2. Ungültige Genres → sollen zu einem Fehler führen
  */
 public class VideoDataDrivenTests extends AbstractVideoTestBase {
 
-	 private static final Logger log = LoggerFactory.getLogger(GroupedTests.class);
-	 
-	@BeforeClass (alwaysRun = true) 
+    private static final Logger log = LoggerFactory.getLogger(VideoDataDrivenTests.class);
+
+    @BeforeClass(alwaysRun = true)
     public void videoInitialisation() throws InterruptedException {
         log.info("📥 Starte Initialisierung der Testklasse");
-        videoService.getAllVideos(); // optional zur Prüfung vorhandener Daten
-        Thread.sleep(5000);
+        videoService.getAllVideos();
+        Thread.sleep(2000);
     }
 
-    
-    // Wird nach der gesamten Klasse aufgerufen, um Datenbank aufzuräumen.
-     
-    
-    @AfterClass (alwaysRun = true)
+    @AfterClass(alwaysRun = true)
     public void cleanUpAfterClass() throws InterruptedException {
         log.info("🧼 Nach der Testklasse: Lösche alle Videos");
+        Thread.sleep(5000);
         videoRepository.deleteAll();
     }
-    
-    
-    
-    
-	
-    // 1️⃣ Einfacher DataProvider für verschiedene Genres
-    @DataProvider(name = "genreProvider")
-    public Object[][] provideGenres() {
+
+    // ✅ 1. Gültige Genres – alles sollte klappen
+    @DataProvider(name = "validGenres")
+    public Object[][] validGenres() {
         return new Object[][] {
-            {"Action"}, {"SciFi"}, {"Dokumentation"}, {"Drama"}, {"Komödie"}
+            {"Action"},
+            {"SciFi"},
+            {"Komödie"}
         };
     }
 
-    @Test(dataProvider = "genreProvider", priority = 1, groups = {"dataprovider"})
-    public void testAddVideoWithGenre(String genre) throws InterruptedException {
+    @Test(dataProvider = "validGenres", priority = 1, groups = {"dataprovider"})
+    public void testAddVideoWithValidGenre(String genre) throws InterruptedException {
         Video video = new Video("Genre-Test", "12", "Test für Genre", genre);
         Video saved = videoService.addVideo(video);
-        Thread.sleep(5000); // Für Präsentationszwecke
+        Thread.sleep(1000);
         assertEquals(saved.getGenre(), genre);
     }
-    
-    
-    
-    
-    
 
-    // 2️⃣ Erweiterter DataProvider mit mehreren Feldern
+    // ❌ 2. Ungültige Genres – wir erwarten, dass der Code scheitert
+    @DataProvider(name = "invalidGenres")
+    public Object[][] invalidGenres() {
+        return new Object[][] {
+            {""},
+            {null},
+            {123}
+        };
+    }
+
+    @Test(dataProvider = "invalidGenres", priority = 2, expectedExceptions = Exception.class, groups = {"dataprovider"})
+    public void testAddVideoWithInvalidGenre(Object genreObj) {
+        // erzwinge Konvertierung – Fehler tritt hier oder beim Speichern auf
+        String genre = (genreObj != null) ? genreObj.toString() : null;
+        Video video = new Video("Ungültig", "12", "Fehlerfall", genre);
+        videoService.addVideo(video); // erwartet, dass hier Exception geworfen wird
+    }
+
+    // 🧪 3. Kombinationstest (bleibt wie vorher)
     @DataProvider(name = "videoCombinations")
     public Object[][] videoData() {
         return new Object[][] {
@@ -75,20 +82,14 @@ public class VideoDataDrivenTests extends AbstractVideoTestBase {
         };
     }
 
-    @Test(dataProvider = "videoCombinations", priority = 2, groups = {"dataprovider"})
+    @Test(dataProvider = "videoCombinations", priority = 3, groups = {"dataprovider"})
     public void testCreateVideoWithCombinations(String title, String rating, String description, String genre) {
         Video video = new Video(title, rating, description, genre);
         Video saved = videoService.addVideo(video);
 
-        assertEquals(saved.getTitle(), title, "Titel stimmt nicht überein");
-        assertEquals(saved.getAge_rating(), rating, "Altersfreigabe stimmt nicht überein");
-        assertEquals(saved.getDescription(), description, "Beschreibung stimmt nicht überein");
-        assertEquals(saved.getGenre(), genre, "Genre stimmt nicht überein");
+        assertEquals(saved.getTitle(), title);
+        assertEquals(saved.getAge_rating(), rating);
+        assertEquals(saved.getDescription(), description);
+        assertEquals(saved.getGenre(), genre);
     }
-    
-    
-    
-    
-    
-    
 }

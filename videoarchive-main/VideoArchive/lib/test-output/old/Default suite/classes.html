@@ -4,19 +4,26 @@
 <th>Method name</th>
 <th>Groups</th>
 </tr><tr>
-<td>fh.aalen.test.SimpleTestExample</td>
+<td>fh.aalen.test.VideoDataDrivenTests</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>testAddVideoFail</td>
-<td>&nbsp;</td></tr>
+<td>testAddVideoWithValidGenre</td>
+<td>dataprovider </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
-<td>AddVideoTest</td>
-<td>&nbsp;</td></tr>
+<td>testCreateVideoWithCombinations</td>
+<td>dataprovider </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>testAddVideoWithInvalidGenre</td>
+<td>dataprovider </td>
+</tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
 </tr>
@@ -30,7 +37,7 @@
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>videoInitalisation</td>
+<td>videoInitialisation</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeMethod</td>
@@ -38,10 +45,6 @@
 <tr>
 <td>&nbsp;</td>
 <td>springTestContextBeforeTestMethod</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>logTestStart</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@AfterMethod</td>
@@ -55,7 +58,7 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>beforeClass</td>
+<td>cleanUpAfterClass</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>

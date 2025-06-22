@@ -1,6 +1,7 @@
 package fh.aalen.test;
 
 import org.testng.ITestResult;
+
 import org.testng.TestListenerAdapter;
 
 public class DotTestListener extends TestListenerAdapter {
@@ -8,17 +9,17 @@ public class DotTestListener extends TestListenerAdapter {
 
     @Override
     public void onTestFailure(ITestResult tr) {
-    	log("❌ Test fehlgeschlagen: " + tr.getName() + "   ");
+    	log("\n\n❌ Test fehlgeschlagen: " + tr.getName() + "   \n" );
     }
 
     @Override
     public void onTestSkipped(ITestResult tr) {
-    	log("⚠️ Test übersprungen: " + tr.getName() + "   ");
+    	log("\n\n⚠️ Test übersprungen: " + tr.getName() + "  \n ");
     }
 
     @Override
     public void onTestSuccess(ITestResult tr) {
-        log("✅ Test erfolgreich " + tr.getName()+ "   ");
+        log("\n\n✅ Test erfolgreich " + tr.getName()+ "   \n");
     }
 
     private void log(String string) {
