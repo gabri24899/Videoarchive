@@ -14,6 +14,12 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
 
     private static final Logger log = LoggerFactory.getLogger(PriorityAndDependencyTests.class);
     
+    
+    
+    
+    
+    
+    
     /**
      * Wird einmal vor allen Tests der Klasse aufgerufen.
      */

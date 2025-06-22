@@ -1,178 +1,220 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-22T17:27:58 MESZ" name="VideoServiceSuite" finished-at="2025-06-22T17:28:30 MESZ" duration-ms="32647">
+  <suite started-at="2025-06-22T19:14:18 MESZ" name="Default suite" finished-at="2025-06-22T19:14:23 MESZ" duration-ms="4627">
     <groups>
-      <group name="crud">
-        <method signature="GroupedTests.testCreateVideo()[pri:1, instance:fh.aalen.test.GroupedTests@340b9973]" name="testCreateVideo" class="fh.aalen.test.GroupedTests"/>
-        <method signature="GroupedTests.testReadVideoById()[pri:2, instance:fh.aalen.test.GroupedTests@340b9973]" name="testReadVideoById" class="fh.aalen.test.GroupedTests"/>
-        <method signature="GroupedTests.testGetAllVideos()[pri:3, instance:fh.aalen.test.GroupedTests@340b9973]" name="testGetAllVideos" class="fh.aalen.test.GroupedTests"/>
-        <method signature="GroupedTests.testUpdateVideo()[pri:4, instance:fh.aalen.test.GroupedTests@340b9973]" name="testUpdateVideo" class="fh.aalen.test.GroupedTests"/>
-        <method signature="GroupedTests.testDeleteVideo()[pri:5, instance:fh.aalen.test.GroupedTests@340b9973]" name="testDeleteVideo" class="fh.aalen.test.GroupedTests"/>
-      </group> <!-- crud -->
     </groups>
-    <test started-at="2025-06-22T17:27:58 MESZ" name="AlleGruppenAusführen" finished-at="2025-06-22T17:28:30 MESZ" duration-ms="32647">
-      <class name="fh.aalen.test.GroupedTests">
-        <test-method is-config="true" signature="beforeEntireSuite()[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:27:58 MESZ" name="beforeEntireSuite" finished-at="2025-06-22T17:27:58 MESZ" duration-ms="9" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeEntireSuite -->
-        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:27:58 MESZ" name="springTestContextBeforeTestClass" finished-at="2025-06-22T17:27:58 MESZ" duration-ms="4" status="PASS">
+    <test started-at="2025-06-22T19:14:18 MESZ" name="Default test" finished-at="2025-06-22T19:14:23 MESZ" duration-ms="4627">
+      <class name="fh.aalen.test.VideoServiceValidationTests">
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:fh.aalen.test.VideoServiceValidationTests@74960bfa]" started-at="2025-06-22T19:14:18 MESZ" name="springTestContextBeforeTestClass" finished-at="2025-06-22T19:14:18 MESZ" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:27:58 MESZ" name="springTestContextPrepareTestInstance" finished-at="2025-06-22T17:28:02 MESZ" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="4003" status="PASS">
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:fh.aalen.test.VideoServiceValidationTests@74960bfa]" started-at="2025-06-22T19:14:18 MESZ" name="springTestContextPrepareTestInstance" finished-at="2025-06-22T19:14:22 MESZ" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="4125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method is-config="true" signature="videoInitialisation()[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:02 MESZ" name="videoInitialisation" finished-at="2025-06-22T17:28:07 MESZ" duration-ms="5032" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- videoInitialisation -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:07 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-22T17:28:07 MESZ" duration-ms="405" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoServiceValidationTests@74960bfa]" started-at="2025-06-22T19:14:22 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-22T19:14:23 MESZ" duration-ms="414" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.GroupedTests.testCreateVideo() throws java.lang.InterruptedException]]>
+                <![CDATA[public void fh.aalen.test.VideoServiceValidationTests.testAddNullVideo()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testCreateVideo()[pri:1, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:07 MESZ" name="testCreateVideo" finished-at="2025-06-22T17:28:12 MESZ" duration-ms="5032" status="PASS">
+        <test-method signature="testAddNullVideo()[pri:0, instance:fh.aalen.test.VideoServiceValidationTests@74960bfa]" started-at="2025-06-22T19:14:23 MESZ" name="testAddNullVideo" finished-at="2025-06-22T19:14:23 MESZ" duration-ms="9" status="PASS">
+          <exception class="org.springframework.dao.InvalidDataAccessApiUsageException">
+            <message>
+              <![CDATA[Entity must not be null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.springframework.dao.InvalidDataAccessApiUsageException: Entity must not be null
+at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:371)
+at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:246)
+at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+at jdk.proxy2/jdk.proxy2.$Proxy128.save(Unknown Source)
+at fh.aalen.video.VideoService.addVideo(VideoService.java:50)
+at fh.aalen.test.VideoServiceValidationTests.testAddNullVideo(VideoServiceValidationTests.java:13)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:258)
+at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:154)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:272)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:656)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.IllegalArgumentException: Entity must not be null
+at org.springframework.util.Assert.notNull(Assert.java:172)
+at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:625)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+... 38 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.springframework.dao.InvalidDataAccessApiUsageException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCreateVideo -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:12 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-22T17:28:12 MESZ" duration-ms="7" status="PASS">
+        </test-method> <!-- testAddNullVideo -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoServiceValidationTests@74960bfa]" started-at="2025-06-22T19:14:23 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-22T19:14:23 MESZ" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.GroupedTests.testCreateVideo() throws java.lang.InterruptedException]]>
+                <![CDATA[public void fh.aalen.test.VideoServiceValidationTests.testAddNullVideo()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:12 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-22T17:28:12 MESZ" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoServiceValidationTests@74960bfa]" started-at="2025-06-22T19:14:23 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-22T19:14:23 MESZ" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.GroupedTests.testReadVideoById() throws java.lang.InterruptedException]]>
+                <![CDATA[public void fh.aalen.test.VideoServiceValidationTests.testDeleteNonExistentVideo()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testReadVideoById()[pri:2, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:12 MESZ" name="testReadVideoById" finished-at="2025-06-22T17:28:15 MESZ" depends-on-methods="fh.aalen.test.GroupedTests.testCreateVideo" duration-ms="3014" status="PASS">
+        <test-method signature="testDeleteNonExistentVideo()[pri:0, instance:fh.aalen.test.VideoServiceValidationTests@74960bfa]" started-at="2025-06-22T19:14:23 MESZ" name="testDeleteNonExistentVideo" finished-at="2025-06-22T19:14:23 MESZ" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testReadVideoById -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:15 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-22T17:28:15 MESZ" duration-ms="1" status="PASS">
+        </test-method> <!-- testDeleteNonExistentVideo -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoServiceValidationTests@74960bfa]" started-at="2025-06-22T19:14:23 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-22T19:14:23 MESZ" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.GroupedTests.testReadVideoById() throws java.lang.InterruptedException]]>
+                <![CDATA[public void fh.aalen.test.VideoServiceValidationTests.testDeleteNonExistentVideo()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:15 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-22T17:28:15 MESZ" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoServiceValidationTests@74960bfa]" started-at="2025-06-22T19:14:23 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-22T19:14:23 MESZ" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.GroupedTests.testGetAllVideos() throws java.lang.InterruptedException]]>
+                <![CDATA[public void fh.aalen.test.VideoServiceValidationTests.testUpdateNonExistentVideo()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testGetAllVideos()[pri:3, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:15 MESZ" name="testGetAllVideos" finished-at="2025-06-22T17:28:21 MESZ" depends-on-methods="fh.aalen.test.GroupedTests.testCreateVideo" duration-ms="6025" status="PASS">
+        <test-method signature="testUpdateNonExistentVideo()[pri:0, instance:fh.aalen.test.VideoServiceValidationTests@74960bfa]" started-at="2025-06-22T19:14:23 MESZ" name="testUpdateNonExistentVideo" finished-at="2025-06-22T19:14:23 MESZ" duration-ms="2" status="PASS">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Video nicht gefunden]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Video nicht gefunden
+at fh.aalen.video.VideoService.lambda$1(VideoService.java:60)
+at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+at fh.aalen.video.VideoService.updateVideo(VideoService.java:60)
+at fh.aalen.test.VideoServiceValidationTests.testUpdateNonExistentVideo(VideoServiceValidationTests.java:19)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:258)
+at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:154)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:272)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:656)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetAllVideos -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:21 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-22T17:28:21 MESZ" duration-ms="3" status="PASS">
+        </test-method> <!-- testUpdateNonExistentVideo -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoServiceValidationTests@74960bfa]" started-at="2025-06-22T19:14:23 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-22T19:14:23 MESZ" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.GroupedTests.testGetAllVideos() throws java.lang.InterruptedException]]>
+                <![CDATA[public void fh.aalen.test.VideoServiceValidationTests.testUpdateNonExistentVideo()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:21 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-22T17:28:21 MESZ" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void fh.aalen.test.GroupedTests.testUpdateVideo() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testUpdateVideo()[pri:4, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:21 MESZ" name="testUpdateVideo" finished-at="2025-06-22T17:28:24 MESZ" depends-on-methods="fh.aalen.test.GroupedTests.testCreateVideo" duration-ms="3022" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUpdateVideo -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:24 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-22T17:28:24 MESZ" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void fh.aalen.test.GroupedTests.testUpdateVideo() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:24 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-22T17:28:24 MESZ" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void fh.aalen.test.GroupedTests.testDeleteVideo() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testDeleteVideo()[pri:5, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:24 MESZ" name="testDeleteVideo" finished-at="2025-06-22T17:28:30 MESZ" depends-on-methods="fh.aalen.test.GroupedTests.testUpdateVideo" duration-ms="6029" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testDeleteVideo -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:30 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-22T17:28:30 MESZ" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void fh.aalen.test.GroupedTests.testDeleteVideo() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="cleanUpAfterClass()[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:30 MESZ" name="cleanUpAfterClass" finished-at="2025-06-22T17:28:30 MESZ" duration-ms="5" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanUpAfterClass -->
-        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:30 MESZ" name="springTestContextAfterTestClass" finished-at="2025-06-22T17:28:30 MESZ" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:fh.aalen.test.VideoServiceValidationTests@74960bfa]" started-at="2025-06-22T19:14:23 MESZ" name="springTestContextAfterTestClass" finished-at="2025-06-22T19:14:23 MESZ" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->
-        <test-method is-config="true" signature="afterEntireSuite()[pri:0, instance:fh.aalen.test.GroupedTests@340b9973]" started-at="2025-06-22T17:28:30 MESZ" name="afterEntireSuite" finished-at="2025-06-22T17:28:30 MESZ" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEntireSuite -->
-      </class> <!-- fh.aalen.test.GroupedTests -->
-    </test> <!-- AlleGruppenAusführen -->
-  </suite> <!-- VideoServiceSuite -->
+      </class> <!-- fh.aalen.test.VideoServiceValidationTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

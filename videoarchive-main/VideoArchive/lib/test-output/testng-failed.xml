@@ -1,32 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [VideoServiceSuite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="fh.aalen.test.DotTestListener"/>
-  </listeners>
-  <test thread-count="5" name="AlleGruppenAusführen(failed)">
-    <groups>
-      <run>
-        <include name="crud"/>
-      </run>
-    </groups>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="fh.aalen.test.GroupedTests">
+      <class name="fh.aalen.test.VideoServiceValidationTests">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
-          <include name="testDeleteVideo"/>
           <include name="springTestContextBeforeTestMethod"/>
-          <include name="beforeEntireSuite"/>
-          <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="testAddNullVideo"/>
           <include name="springTestContextAfterTestMethod"/>
-          <include name="testCreateVideo"/>
-          <include name="afterEntireSuite"/>
-          <include name="testUpdateVideo"/>
-          <include name="testReadVideoById"/>
-          <include name="testGetAllVideos"/>
         </methods>
-      </class> <!-- fh.aalen.test.GroupedTests -->
+      </class> <!-- fh.aalen.test.VideoServiceValidationTests -->
     </classes>
-  </test> <!-- AlleGruppenAusführen(failed) -->
-</suite> <!-- Failed suite [VideoServiceSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
