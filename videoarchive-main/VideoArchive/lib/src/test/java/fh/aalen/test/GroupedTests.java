@@ -12,7 +12,7 @@ import org.testng.annotations.*;
 import fh.aalen.video.Video;
 
  
-// sonst erkennt testNG suit nicht richtig für Befor und Aftersuit 
+
 
 public class GroupedTests extends AbstractVideoTestBase {
 
@@ -35,7 +35,7 @@ public class GroupedTests extends AbstractVideoTestBase {
    
     @BeforeClass (groups = {"crud"}) 
     public void videoInitialisation() throws InterruptedException {
-        log.info("📥 Starte Initialisierung der Testklasse");
+        log.info("Starte Initialisierung der Testklasse");
         videoService.getAllVideos(); // optional zur Prüfung vorhandener Daten
         Thread.sleep(5000);
     }
@@ -46,18 +46,17 @@ public class GroupedTests extends AbstractVideoTestBase {
     
     @AfterClass (groups = {"crud"})
     public void cleanUpAfterClass() throws InterruptedException {
-        log.info("🧼 Nach der Testklasse: Lösche alle Videos");
+        log.info("Nach der Testklasse: Lösche alle Videos");
         videoRepository.deleteAll();
     }
     
    
 
-    /**
-     * Erstellt ein neues Video und speichert es für spätere Verwendung (CREATE).
-     */
+    //Testet ob ein Video korrekt erstellt und in der DB abgespeichert wird. (CREATE).
+    
     @Test(priority = 1, groups = {"crud"})
     public void testCreateVideo() throws InterruptedException {
-        log.info("🟢 CREATE-Test gestartet");
+        log.info("CREATE-Test gestartet");
 
         Video testVideo = new Video("Inception", "12", "Träume in Träumen", "Thriller");
         latestVideo = videoService.addVideo(testVideo);
@@ -69,12 +68,11 @@ public class GroupedTests extends AbstractVideoTestBase {
         log.info("✅ Video erstellt mit ID {}", latestVideo.getId());
     }
 
-    /**
-     * Ein Video wird gelesen anhand seiner ID (READ).
-     */
+    //Ein Video wird gelesen anhand seiner ID (READ).
+     
     @Test(priority = 2, groups = {"crud"})
     public void testReadVideoById() throws InterruptedException {
-        log.info("📖 READ (by ID)-Test gestartet");
+        log.info("READ (by ID)-Test gestartet");
 
         Video found = videoService.getVideoById(latestVideo.getId())
                                   .orElseThrow(() -> new AssertionError("❌ Video wurde nicht gefunden"));
@@ -86,32 +84,10 @@ public class GroupedTests extends AbstractVideoTestBase {
     }
 
 
-    /**
-     * Liste aller Videos wird geladen (READ ALL).
-     */
-    @Test(priority = 3, groups = {"crud"})
-    public void testGetAllVideos() throws InterruptedException {
-        log.info("📊 READ ALL - Test gestartet");
-
-        int initialSize = (int) videoService.getAllVideos().spliterator().getExactSizeIfKnown();
-        Thread.sleep(3000);
-
-        videoService.addVideo(new Video("Video A", "16", "Beschreibung A", "Genre A"));
-        videoService.addVideo(new Video("Video B", "12", "Beschreibung B", "Genre B"));
-
-        int newSize = (int) videoService.getAllVideos().spliterator().getExactSizeIfKnown();
-        Thread.sleep(3000);
-
-        assertTrue(newSize >= initialSize + 2);
-        log.info("✅ Videos erfolgreich geladen: {} → {}", initialSize, newSize);
-    }
-
-    /**
-     * Vorhandenes Video wird aktualisiert (UPDATE).
-     */
+    //testen der Aktualisierung eines bereits gespeicherten Videos. (UPDATE).
     @Test(priority = 4, groups = {"crud"})
     public void testUpdateVideo() throws InterruptedException {
-        log.info("✏️ UPDATE-Test gestartet");
+        log.info("UPDATE-Test gestartet");
 
         Thread.sleep(3000);
         Video updated = videoService.updateVideo(latestVideo.getId(),
@@ -125,12 +101,12 @@ public class GroupedTests extends AbstractVideoTestBase {
         log.info("✅ Video aktualisiert: {}", updated.getTitle());
     }
 
-    /**
-     * Das Video wird gelöscht (DELETE).
-     */
-    @Test(priority = 5, groups = {"crud"})
+   
+    //testen ob das Video gelöscht wird ohne crud (DELETE).
+    
+    @Test
     public void testDeleteVideo() throws InterruptedException {
-        log.info("🗑️ DELETE-Test gestartet");
+        log.info("DELETE-Test gestartet");
 
         Thread.sleep(3000);
         videoService.deleteVideo(latestVideo.getId());

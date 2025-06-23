@@ -30,7 +30,7 @@ public void videoInitalisation  () throws InterruptedException {
 }
 
 @AfterClass
-public void beforeClass() throws InterruptedException {
+public void AfterClass() throws InterruptedException {
     log.info("\n\n Löschen der DB Einträge \n");
     Thread.sleep(5000);
     videoRepository.deleteAll(); 
@@ -39,7 +39,7 @@ public void beforeClass() throws InterruptedException {
 @BeforeMethod
 public void logTestStart(java.lang.reflect.Method method) throws InterruptedException {
    log.info("\n\n Der aktuelle Test : {}", method.getName() + " Wird Ausgeführt \n");
-   Thread.sleep(2000); // kurze Pause zur Hervorhebung
+   
 }
 	
 

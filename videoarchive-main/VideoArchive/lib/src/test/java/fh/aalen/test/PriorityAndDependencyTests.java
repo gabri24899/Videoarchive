@@ -26,7 +26,7 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
      
     @BeforeClass
     public void videoInitialisation() throws InterruptedException {
-        log.info("📥 Starte Initialisierung der Testklasse");
+        log.info(" Starte Initialisierung der Testklasse");
         videoService.getAllVideos(); // optional zur Prüfung vorhandener Daten
         Thread.sleep(5000);
     }
@@ -36,7 +36,7 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
      
     @AfterClass
     public void cleanUpAfterClass() throws InterruptedException {
-        log.info("🧼 Nach der Testklasse: Lösche alle Videos");
+        log.info(" Nach der Testklasse: Lösche alle Videos");
         Thread.sleep(10000); 
         videoRepository.deleteAll();
     }
@@ -55,9 +55,9 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
      
     
    
-    @Test(priority = 1 ) // 1
+    @Test(priority = 1 ) // 1 Passes
     public void AddVideoTest() throws InterruptedException {
-        log.info("🎬 AddVideoTest gestartet");
+        log.info(" AddVideoTest gestartet");
 
         Video testVideo = new Video("Matrix", "16", "Cyberwelt", "SciFi");
         latestVideo = videoService.addVideo(testVideo);
@@ -73,9 +73,9 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
      //Aktualisiert das zuvor erstellte Video. Läuft nur, wenn AddVideoTest erfolgreich war.
     
     
-    @Test(priority = 3) // 4
+    @Test(priority = 3) // 4 Passes
     public void testUpdateVideo() throws InterruptedException {
-        log.info("✏️ Starte Update-Test für Video mit ID: {}", latestVideo.getId());
+        log.info(" Starte Update-Test für Video mit ID: {}", latestVideo.getId());
 
         Thread.sleep(3000); //Zeit zur manuellen DB-Prüfung vor Update
 
@@ -95,8 +95,10 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
     
     
      //Test mit absichtlicher Falscherwartung – zu Demo-Zwecken.
-     
-    @Test(priority = 2) //3
+    
+
+  //3 Fail
+    @Test(priority = 2) 
     public void testAddVideoFail() throws InterruptedException {
         log.info("🚨 Starte Demo-Fehltest");
 
@@ -120,10 +122,10 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
     
     
     
-   // 2
+   // 2 fail
     @Test( dependsOnMethods = {"AddVideoTest"})
     public void testUpdateVideo2() throws InterruptedException {
-        log.info("✏️ Starte Update-Test für Video mit ID: {}", latestVideo.getId());
+        log.info(" Starte Update-Test für Video mit ID: {}", latestVideo.getId());
 
         Thread.sleep(30000); //Zeit zur manuellen DB-Prüfung vor Update
 

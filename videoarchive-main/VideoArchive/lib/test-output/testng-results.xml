@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="5" passed="2" failed="2" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-23T19:02:31 MESZ" name="Default suite" finished-at="2025-06-23T19:03:52 MESZ" duration-ms="80755">
+  <suite started-at="2025-06-23T22:37:04 MESZ" name="Default suite" finished-at="2025-06-23T22:38:25 MESZ" duration-ms="80972">
     <groups>
     </groups>
-    <test started-at="2025-06-23T19:02:31 MESZ" name="Default test" finished-at="2025-06-23T19:03:52 MESZ" duration-ms="80755">
+    <test started-at="2025-06-23T22:37:04 MESZ" name="Default test" finished-at="2025-06-23T22:38:25 MESZ" duration-ms="80972">
       <class name="fh.aalen.test.PriorityAndDependencyTests">
-        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:31 MESZ" name="springTestContextBeforeTestClass" finished-at="2025-06-23T19:02:31 MESZ" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:37:04 MESZ" name="springTestContextBeforeTestClass" finished-at="2025-06-23T22:37:04 MESZ" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:31 MESZ" name="springTestContextPrepareTestInstance" finished-at="2025-06-23T19:02:35 MESZ" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="3982" status="PASS">
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:37:04 MESZ" name="springTestContextPrepareTestInstance" finished-at="2025-06-23T22:37:08 MESZ" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="4120" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method is-config="true" signature="videoInitialisation()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:35 MESZ" name="videoInitialisation" finished-at="2025-06-23T19:02:40 MESZ" duration-ms="5043" status="PASS">
+        <test-method is-config="true" signature="videoInitialisation()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:37:08 MESZ" name="videoInitialisation" finished-at="2025-06-23T22:37:13 MESZ" duration-ms="5038" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- videoInitialisation -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:40 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T19:02:40 MESZ" duration-ms="423" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:37:13 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T22:37:14 MESZ" duration-ms="410" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,7 +30,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method is-config="true" signature="logTestStart(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:40 MESZ" name="logTestStart" finished-at="2025-06-23T19:02:42 MESZ" duration-ms="2010" status="PASS">
+        <test-method is-config="true" signature="logTestStart(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:37:14 MESZ" name="logTestStart" finished-at="2025-06-23T22:37:16 MESZ" duration-ms="2009" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,11 +41,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logTestStart -->
-        <test-method signature="AddVideoTest()[pri:1, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:42 MESZ" name="AddVideoTest" finished-at="2025-06-23T19:02:47 MESZ" duration-ms="5013" status="PASS">
+        <test-method signature="AddVideoTest()[pri:1, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:37:16 MESZ" name="AddVideoTest" finished-at="2025-06-23T22:37:21 MESZ" duration-ms="5053" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddVideoTest -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:47 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T19:02:47 MESZ" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:37:21 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T22:37:21 MESZ" duration-ms="19" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -56,7 +56,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:47 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T19:02:47 MESZ" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:37:21 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T22:37:21 MESZ" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -67,7 +67,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method is-config="true" signature="logTestStart(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:47 MESZ" name="logTestStart" finished-at="2025-06-23T19:02:49 MESZ" duration-ms="2013" status="PASS">
+        <test-method is-config="true" signature="logTestStart(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:37:21 MESZ" name="logTestStart" finished-at="2025-06-23T22:37:23 MESZ" duration-ms="2002" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -78,7 +78,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logTestStart -->
-        <test-method signature="testUpdateVideo2()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:49 MESZ" name="testUpdateVideo2" finished-at="2025-06-23T19:03:25 MESZ" depends-on-methods="fh.aalen.test.PriorityAndDependencyTests.AddVideoTest" duration-ms="35047" status="FAIL">
+        <test-method signature="testUpdateVideo2()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:37:23 MESZ" name="testUpdateVideo2" finished-at="2025-06-23T22:37:58 MESZ" depends-on-methods="fh.aalen.test.PriorityAndDependencyTests.AddVideoTest" duration-ms="35092" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Matrix Reloaded] but found [The Dark Knight]]]>
@@ -91,7 +91,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
-at fh.aalen.test.PriorityAndDependencyTests.testUpdateVideo2(PriorityAndDependencyTests.java:137)
+at fh.aalen.test.PriorityAndDependencyTests.testUpdateVideo2(PriorityAndDependencyTests.java:139)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -127,7 +127,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUpdateVideo2 -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:25 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T19:03:25 MESZ" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:37:58 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T22:37:58 MESZ" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -138,7 +138,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method signature="testDeleteVideo()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:25 MESZ" name="testDeleteVideo" finished-at="2025-06-23T19:03:25 MESZ" depends-on-methods="fh.aalen.test.PriorityAndDependencyTests.testUpdateVideo2" duration-ms="0" status="SKIP">
+        <test-method signature="testDeleteVideo()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:37:58 MESZ" name="testDeleteVideo" finished-at="2025-06-23T22:37:58 MESZ" depends-on-methods="fh.aalen.test.PriorityAndDependencyTests.testUpdateVideo2" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method fh.aalen.test.PriorityAndDependencyTests.testDeleteVideo() on instance fh.aalen.test.PriorityAndDependencyTests@301ec38b depends on not successfully finished methods 
@@ -172,7 +172,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDeleteVideo -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:25 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T19:03:25 MESZ" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:37:58 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T22:37:58 MESZ" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -183,7 +183,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method is-config="true" signature="logTestStart(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:25 MESZ" name="logTestStart" finished-at="2025-06-23T19:03:27 MESZ" duration-ms="2008" status="PASS">
+        <test-method is-config="true" signature="logTestStart(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:37:58 MESZ" name="logTestStart" finished-at="2025-06-23T22:38:00 MESZ" duration-ms="2007" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -194,7 +194,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logTestStart -->
-        <test-method signature="testAddVideoFail()[pri:2, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:27 MESZ" name="testAddVideoFail" finished-at="2025-06-23T19:03:32 MESZ" duration-ms="5009" status="FAIL">
+        <test-method signature="testAddVideoFail()[pri:2, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:38:00 MESZ" name="testAddVideoFail" finished-at="2025-06-23T22:38:05 MESZ" duration-ms="5017" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Spongebob] but found [Inception]]]>
@@ -207,7 +207,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
-at fh.aalen.test.PriorityAndDependencyTests.testAddVideoFail(PriorityAndDependencyTests.java:108)
+at fh.aalen.test.PriorityAndDependencyTests.testAddVideoFail(PriorityAndDependencyTests.java:110)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -243,7 +243,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddVideoFail -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:32 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T19:03:32 MESZ" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:38:05 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T22:38:05 MESZ" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -254,7 +254,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:32 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T19:03:32 MESZ" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:38:05 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T22:38:05 MESZ" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -265,7 +265,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method is-config="true" signature="logTestStart(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:32 MESZ" name="logTestStart" finished-at="2025-06-23T19:03:34 MESZ" duration-ms="2005" status="PASS">
+        <test-method is-config="true" signature="logTestStart(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:38:05 MESZ" name="logTestStart" finished-at="2025-06-23T22:38:07 MESZ" duration-ms="2005" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -276,11 +276,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logTestStart -->
-        <test-method signature="testUpdateVideo()[pri:3, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:34 MESZ" name="testUpdateVideo" finished-at="2025-06-23T19:03:42 MESZ" duration-ms="8028" status="PASS">
+        <test-method signature="testUpdateVideo()[pri:3, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:38:07 MESZ" name="testUpdateVideo" finished-at="2025-06-23T22:38:15 MESZ" duration-ms="8044" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUpdateVideo -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:42 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T19:03:42 MESZ" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:38:15 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T22:38:15 MESZ" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -291,11 +291,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="cleanUpAfterClass()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:42 MESZ" name="cleanUpAfterClass" finished-at="2025-06-23T19:03:52 MESZ" duration-ms="10097" status="PASS">
+        <test-method is-config="true" signature="cleanUpAfterClass()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:38:15 MESZ" name="cleanUpAfterClass" finished-at="2025-06-23T22:38:25 MESZ" duration-ms="10038" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUpAfterClass -->
-        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:52 MESZ" name="springTestContextAfterTestClass" finished-at="2025-06-23T19:03:52 MESZ" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T22:38:25 MESZ" name="springTestContextAfterTestClass" finished-at="2025-06-23T22:38:25 MESZ" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->

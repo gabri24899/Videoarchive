@@ -2,6 +2,7 @@ package fh.aalen.test;
 
 import static org.testng.Assert.*;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterClass;
@@ -11,14 +12,9 @@ import org.testng.annotations.Test;
 
 import fh.aalen.video.Video;
 
-/**
- * Diese Klasse enthält zwei Data-Driven Testfälle:
- * 1. Gültige Genres → sollen erfolgreich gespeichert werden
- * 2. Ungültige Genres → sollen zu einem Fehler führen
- */
-public class DataProviderTest extends AbstractVideoTestBase {
+public class DataProviderTests extends AbstractVideoTestBase {
 
-    private static final Logger log = LoggerFactory.getLogger(DataProviderTest.class);
+    private static final Logger log = LoggerFactory.getLogger(DataProviderTests.class);
 
     @BeforeClass(alwaysRun = true)
     public void videoInitialisation() throws InterruptedException {
@@ -35,13 +31,8 @@ public class DataProviderTest extends AbstractVideoTestBase {
     }
     
     
-    
-    
-    
-    
-    
 
-    // ✅ 1. Gültige Genres – alles sollte klappen
+    //übergeben von sinnvollen testGenres
     @DataProvider(name = "validGenres")
     public Object[][] validGenres() {
         return new Object[][] {
@@ -51,38 +42,27 @@ public class DataProviderTest extends AbstractVideoTestBase {
         };
     }
 
-    @Test(dataProvider = "validGenres", priority = 1, groups = {"dataprovider"})
+    @Test(dataProvider = "validGenres")
     public void testAddVideoWithValidGenre(String genre) throws InterruptedException {
         Video video = new Video("Genre-Test", "12", "Test für Genre", genre);
         Video saved = videoService.addVideo(video);
         Thread.sleep(1000);
         assertEquals(saved.getGenre(), genre);
     }
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-
-    // 🧪 3. Kombinationstest (bleibt wie vorher)
+   
+    //Eingabe von nicht sinnvollen Parametern wie negativ Alter, etc.
     @DataProvider(name = "videoCombinations")
     public Object[][] videoData() {
         return new Object[][] {
             {"Batman", "12", "Superheld rettet Gotham", "Action"},
-            {"Planet Erde", "0", "Naturdokumentation", "Dokumentation"},
+            {"Planet Erde", "-1", "Negatives Alter", "Dokumentation"},
             {"", "16", "Leerer Titel", "Drama"},
             {"Ghostbusters", "", "Fehlende Altersfreigabe", "Comedy"},
             {"Interstellar", "PG", null, "SciFi"}
         };
     }
 
-    @Test(dataProvider = "videoCombinations", priority = 3, groups = {"dataprovider"})
+    @Test(dataProvider = "videoCombinations")
     public void testCreateVideoWithCombinations(String title, String rating, String description, String genre) {
         Video video = new Video(title, rating, description, genre);
         Video saved = videoService.addVideo(video);
