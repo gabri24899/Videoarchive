@@ -1,274 +1,305 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="2" failed="2" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-23T14:53:02 MESZ" name="Default suite" finished-at="2025-06-23T14:53:14 MESZ" duration-ms="12350">
+  <suite started-at="2025-06-23T19:02:31 MESZ" name="Default suite" finished-at="2025-06-23T19:03:52 MESZ" duration-ms="80755">
     <groups>
-      <group name="dataprovider">
-        <method signature="DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" name="testCreateVideoWithCombinations" class="fh.aalen.test.DataProviderTest"/>
-      </group> <!-- dataprovider -->
     </groups>
-    <test started-at="2025-06-23T14:53:02 MESZ" name="Default test" finished-at="2025-06-23T14:53:14 MESZ" duration-ms="12350">
-      <class name="fh.aalen.test.DataProviderTest">
-        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:02 MESZ" name="springTestContextBeforeTestClass" finished-at="2025-06-23T14:53:02 MESZ" duration-ms="11" status="PASS">
+    <test started-at="2025-06-23T19:02:31 MESZ" name="Default test" finished-at="2025-06-23T19:03:52 MESZ" duration-ms="80755">
+      <class name="fh.aalen.test.PriorityAndDependencyTests">
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:31 MESZ" name="springTestContextBeforeTestClass" finished-at="2025-06-23T19:02:31 MESZ" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:02 MESZ" name="springTestContextPrepareTestInstance" finished-at="2025-06-23T14:53:07 MESZ" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="4714" status="PASS">
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:31 MESZ" name="springTestContextPrepareTestInstance" finished-at="2025-06-23T19:02:35 MESZ" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="3982" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method is-config="true" signature="videoInitialisation()[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:07 MESZ" name="videoInitialisation" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="2037" status="PASS">
+        <test-method is-config="true" signature="videoInitialisation()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:35 MESZ" name="videoInitialisation" finished-at="2025-06-23T19:02:40 MESZ" duration-ms="5043" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- videoInitialisation -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="445" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:40 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T19:02:40 MESZ" duration-ms="423" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.PriorityAndDependencyTests.AddVideoTest() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="testCreateVideoWithCombinations" data-provider="videoCombinations" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="14" status="PASS">
+        <test-method is-config="true" signature="logTestStart(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:40 MESZ" name="logTestStart" finished-at="2025-06-23T19:02:42 MESZ" duration-ms="2010" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Batman]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Superheld rettet Gotham]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Action]]>
+                <![CDATA[public void fh.aalen.test.PriorityAndDependencyTests.AddVideoTest() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCreateVideoWithCombinations -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="5" status="PASS">
+        </test-method> <!-- logTestStart -->
+        <test-method signature="AddVideoTest()[pri:1, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:42 MESZ" name="AddVideoTest" finished-at="2025-06-23T19:02:47 MESZ" duration-ms="5013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddVideoTest -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:47 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T19:02:47 MESZ" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.PriorityAndDependencyTests.AddVideoTest() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:47 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T19:02:47 MESZ" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.PriorityAndDependencyTests.testUpdateVideo2() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="testCreateVideoWithCombinations" data-provider="videoCombinations" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="logTestStart(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:47 MESZ" name="logTestStart" finished-at="2025-06-23T19:02:49 MESZ" duration-ms="2013" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Planet Erde]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Naturdokumentation]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Dokumentation]]>
+                <![CDATA[public void fh.aalen.test.PriorityAndDependencyTests.testUpdateVideo2() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCreateVideoWithCombinations -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="2" status="PASS">
+        </test-method> <!-- logTestStart -->
+        <test-method signature="testUpdateVideo2()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:02:49 MESZ" name="testUpdateVideo2" finished-at="2025-06-23T19:03:25 MESZ" depends-on-methods="fh.aalen.test.PriorityAndDependencyTests.AddVideoTest" duration-ms="35047" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Matrix Reloaded] but found [The Dark Knight]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Matrix Reloaded] but found [The Dark Knight]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at fh.aalen.test.PriorityAndDependencyTests.testUpdateVideo2(PriorityAndDependencyTests.java:137)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:258)
+at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:154)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:272)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:656)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateVideo2 -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:25 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T19:03:25 MESZ" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.PriorityAndDependencyTests.testUpdateVideo2() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="2" status="PASS">
+        <test-method signature="testDeleteVideo()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:25 MESZ" name="testDeleteVideo" finished-at="2025-06-23T19:03:25 MESZ" depends-on-methods="fh.aalen.test.PriorityAndDependencyTests.testUpdateVideo2" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method fh.aalen.test.PriorityAndDependencyTests.testDeleteVideo() on instance fh.aalen.test.PriorityAndDependencyTests@301ec38b depends on not successfully finished methods 
+[fh.aalen.test.PriorityAndDependencyTests.testUpdateVideo2() on instance fh.aalen.test.PriorityAndDependencyTests@301ec38b]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method fh.aalen.test.PriorityAndDependencyTests.testDeleteVideo() on instance fh.aalen.test.PriorityAndDependencyTests@301ec38b depends on not successfully finished methods 
+[fh.aalen.test.PriorityAndDependencyTests.testUpdateVideo2() on instance fh.aalen.test.PriorityAndDependencyTests@301ec38b]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteVideo -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:25 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T19:03:25 MESZ" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.PriorityAndDependencyTests.testAddVideoFail() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="testCreateVideoWithCombinations" data-provider="videoCombinations" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="logTestStart(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:25 MESZ" name="logTestStart" finished-at="2025-06-23T19:03:27 MESZ" duration-ms="2008" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[16]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Leerer Titel]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Drama]]>
+                <![CDATA[public void fh.aalen.test.PriorityAndDependencyTests.testAddVideoFail() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCreateVideoWithCombinations -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="2" status="PASS">
+        </test-method> <!-- logTestStart -->
+        <test-method signature="testAddVideoFail()[pri:2, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:27 MESZ" name="testAddVideoFail" finished-at="2025-06-23T19:03:32 MESZ" duration-ms="5009" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Spongebob] but found [Inception]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Spongebob] but found [Inception]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at fh.aalen.test.PriorityAndDependencyTests.testAddVideoFail(PriorityAndDependencyTests.java:108)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:258)
+at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:154)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:272)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:656)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddVideoFail -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:32 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T19:03:32 MESZ" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.PriorityAndDependencyTests.testAddVideoFail() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:32 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T19:03:32 MESZ" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.PriorityAndDependencyTests.testUpdateVideo() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="testCreateVideoWithCombinations" data-provider="videoCombinations" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="logTestStart(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:32 MESZ" name="logTestStart" finished-at="2025-06-23T19:03:34 MESZ" duration-ms="2005" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Ghostbusters]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Fehlende Altersfreigabe]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Comedy]]>
+                <![CDATA[public void fh.aalen.test.PriorityAndDependencyTests.testUpdateVideo() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCreateVideoWithCombinations -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="1" status="PASS">
+        </test-method> <!-- logTestStart -->
+        <test-method signature="testUpdateVideo()[pri:3, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:34 MESZ" name="testUpdateVideo" finished-at="2025-06-23T19:03:42 MESZ" duration-ms="8028" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateVideo -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:42 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T19:03:42 MESZ" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.PriorityAndDependencyTests.testUpdateVideo() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="testCreateVideoWithCombinations" data-provider="videoCombinations" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Interstellar]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[PG]]>
-              </value>
-            </param>
-            <param index="2">
-              <value is-null="true"/>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[SciFi]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCreateVideoWithCombinations -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="cleanUpAfterClass()[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="cleanUpAfterClass" finished-at="2025-06-23T14:53:14 MESZ" duration-ms="5034" status="PASS">
+        <test-method is-config="true" signature="cleanUpAfterClass()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:42 MESZ" name="cleanUpAfterClass" finished-at="2025-06-23T19:03:52 MESZ" duration-ms="10097" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUpAfterClass -->
-        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:14 MESZ" name="springTestContextAfterTestClass" finished-at="2025-06-23T14:53:14 MESZ" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:fh.aalen.test.PriorityAndDependencyTests@301ec38b]" started-at="2025-06-23T19:03:52 MESZ" name="springTestContextAfterTestClass" finished-at="2025-06-23T19:03:52 MESZ" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->
-      </class> <!-- fh.aalen.test.DataProviderTest -->
+      </class> <!-- fh.aalen.test.PriorityAndDependencyTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

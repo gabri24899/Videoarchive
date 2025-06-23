@@ -2,8 +2,9 @@ package fh.aalen.test;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
+//import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 
 
@@ -13,7 +14,7 @@ import fh.aalen.video.VideoRepository;
 import fh.aalen.video.VideoService;
 
 @SpringBootTest(classes = Anwendung.class)
-@ActiveProfiles("test")
+//@ActiveProfiles("test")
 public abstract class AbstractVideoTestBase extends AbstractTestNGSpringContextTests {
 
     

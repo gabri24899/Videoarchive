@@ -11,9 +11,9 @@
           <include name="springTestContextBeforeTestMethod"/>
           <include name="testUpdateVideo2"/>
           <include name="videoInitialisation"/>
-          <include name="AddVideoTest"/>
-          <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="AddVideoTest"/>
           <include name="springTestContextAfterTestMethod"/>
           <include name="cleanUpAfterClass"/>
           <include name="testAddVideoFail"/>

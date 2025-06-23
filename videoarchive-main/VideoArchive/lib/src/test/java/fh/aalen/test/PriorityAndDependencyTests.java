@@ -2,6 +2,7 @@ package fh.aalen.test;
 
 import static org.testng.Assert.*;
 
+
 import java.lang.reflect.Method;
 
 import org.slf4j.Logger;
@@ -20,9 +21,9 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
     
     
     
-    /**
-     * Wird einmal vor allen Tests der Klasse aufgerufen.
-     */
+    
+     //Wird einmal vor allen Tests der Klasse aufgerufen.
+     
     @BeforeClass
     public void videoInitialisation() throws InterruptedException {
         log.info("📥 Starte Initialisierung der Testklasse");
@@ -30,30 +31,31 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
         Thread.sleep(5000);
     }
 
-    /**
-     * Wird nach der gesamten Klasse aufgerufen, um Datenbank aufzuräumen.
-     */
+    
+     //Wird nach der gesamten Klasse aufgerufen, um Datenbank aufzuräumen.
+     
     @AfterClass
     public void cleanUpAfterClass() throws InterruptedException {
         log.info("🧼 Nach der Testklasse: Lösche alle Videos");
+        Thread.sleep(10000); 
         videoRepository.deleteAll();
     }
 
-    /**
-     * Wird vor jedem einzelnen Test aufgerufen. Zeigt aktuellen Testnamen.
-     */
+    
+    // Wird vor jedem einzelnen Test aufgerufen. Zeigt aktuellen Testnamen.
+     
     @BeforeMethod
     public void logTestStart(Method method) throws InterruptedException {
         log.info("\n\n▶️ Der aktuelle Test: {} wird ausgeführt\n", method.getName());
         Thread.sleep(2000); // kurze Pause zur Hervorhebung
     }
 
-    /**
-     * Erstellt ein neues Video und speichert es für spätere Verwendung.
-     */
+    
+     //Erstellt ein neues Video und speichert es für spätere Verwendung.
+     
     
    
-    @Test(priority = 1 )
+    @Test(priority = 1 ) // 1
     public void AddVideoTest() throws InterruptedException {
         log.info("🎬 AddVideoTest gestartet");
 
@@ -67,21 +69,21 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
         log.info("✅ Video hinzugefügt: {}", latestVideo.getTitle());
     }
 
-    /**
-     * Aktualisiert das zuvor erstellte Video. Läuft nur, wenn AddVideoTest erfolgreich war.
-     */
     
-    @Test(priority = 3)
+     //Aktualisiert das zuvor erstellte Video. Läuft nur, wenn AddVideoTest erfolgreich war.
+    
+    
+    @Test(priority = 3) // 4
     public void testUpdateVideo() throws InterruptedException {
         log.info("✏️ Starte Update-Test für Video mit ID: {}", latestVideo.getId());
 
-        Thread.sleep(3000); // Zeit zur manuellen DB-Prüfung vor Update
+        Thread.sleep(3000); //Zeit zur manuellen DB-Prüfung vor Update
 
         Video update = new Video("Matrix Reloaded", "18", "Zweiter Teil", "Action");
         Video updated = videoService.updateVideo(latestVideo.getId(), update);
         latestVideo = updated;
 
-        Thread.sleep(5000); // Zeit zur Prüfung nach dem Update
+        Thread.sleep(5000); //Zeit zur Prüfung nach dem Update
 
         assertEquals(updated.getTitle(), "Matrix Reloaded");
         assertEquals(updated.getAge_rating(), "18");
@@ -91,10 +93,10 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
         log.info("✅ Update erfolgreich: {}", updated.getTitle());
     }
     
-    /**
-     * Test mit absichtlicher Falscherwartung – zu Demo-Zwecken.
-     */
-    @Test(priority = 2) 
+    
+     //Test mit absichtlicher Falscherwartung – zu Demo-Zwecken.
+     
+    @Test(priority = 2) //3
     public void testAddVideoFail() throws InterruptedException {
         log.info("🚨 Starte Demo-Fehltest");
 
@@ -102,8 +104,8 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
 
         Video savedVideo = videoService.addVideo(testVideo);
 
-        Thread.sleep(5000); // Pause für Präsentation
-        assertEquals(savedVideo.getTitle(), "Spongebob"); // absichtlich falsch
+        Thread.sleep(5000); //Pause für Präsentation
+        assertEquals(savedVideo.getTitle(), "Spongebob"); //absichtlich falsch
 
         log.info("❌ Sollte nicht erfolgreich sein");
     }
@@ -118,19 +120,19 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
     
     
     
-   // @Ignore
+   // 2
     @Test( dependsOnMethods = {"AddVideoTest"})
     public void testUpdateVideo2() throws InterruptedException {
         log.info("✏️ Starte Update-Test für Video mit ID: {}", latestVideo.getId());
 
-        Thread.sleep(30000); // Zeit zur manuellen DB-Prüfung vor Update
+        Thread.sleep(30000); //Zeit zur manuellen DB-Prüfung vor Update
 
         Video update = new Video("The Dark Knight", "16", "Batman gegen Joker", "Action");
 
         Video updated = videoService.updateVideo(latestVideo.getId(), update);
         latestVideo = updated;
 
-        Thread.sleep(5000); // Zeit zur Prüfung nach dem Update
+        Thread.sleep(5000); //Zeit zur Prüfung nach dem Update
 
         assertEquals(updated.getTitle(), "Matrix Reloaded");
         assertEquals(updated.getAge_rating(), "18");
@@ -140,13 +142,15 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
         log.info("✅ Update erfolgreich: {}", updated.getTitle());
     }
     
+    
+    // 5 Skip
     @Test(dependsOnMethods = {"testUpdateVideo2"})
     public void testDeleteVideo() throws InterruptedException {
-        Thread.sleep(3000); // vor dem Löschen
+        Thread.sleep(3000); //vor dem Löschen
 
         videoService.deleteVideo(latestVideo.getId());
 
-        Thread.sleep(3000); // nach dem Löschen
+        Thread.sleep(3000); //nach dem Löschen
 
         boolean videoExists = videoService.getVideoById(latestVideo.getId()).isPresent();
         assertFalse(videoExists, "Video sollte nach dem Löschen nicht mehr vorhanden sein.");
