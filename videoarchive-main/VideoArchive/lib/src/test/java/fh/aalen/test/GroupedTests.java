@@ -2,7 +2,8 @@ package fh.aalen.test;
 
 import static org.testng.Assert.*;
 
-import java.util.Optional;
+
+
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -71,22 +72,24 @@ public class GroupedTests extends AbstractVideoTestBase {
     /**
      * Ein Video wird gelesen anhand seiner ID (READ).
      */
-    @Test(priority = 2, groups = {"crud"}, dependsOnMethods = {"testCreateVideo"})
+    @Test(priority = 2, groups = {"crud"})
     public void testReadVideoById() throws InterruptedException {
         log.info("📖 READ (by ID)-Test gestartet");
 
-        Optional<Video> found = videoService.getVideoById(latestVideo.getId());
+        Video found = videoService.getVideoById(latestVideo.getId())
+                                  .orElseThrow(() -> new AssertionError("❌ Video wurde nicht gefunden"));
         Thread.sleep(3000);
-        assertTrue(found.isPresent());
-        assertEquals(found.get().getTitle(), "Inception");
+        
+        assertEquals(found.getTitle(), "Inception");
 
-        log.info("✅ Video erfolgreich geladen: {}", found.get().getTitle());
+        log.info("✅ Video erfolgreich geladen: {}", found.getTitle());
     }
+
 
     /**
      * Liste aller Videos wird geladen (READ ALL).
      */
-    @Test(priority = 3, groups = {"crud"}, dependsOnMethods = {"testCreateVideo"})
+    @Test(priority = 3, groups = {"crud"})
     public void testGetAllVideos() throws InterruptedException {
         log.info("📊 READ ALL - Test gestartet");
 
@@ -106,7 +109,7 @@ public class GroupedTests extends AbstractVideoTestBase {
     /**
      * Vorhandenes Video wird aktualisiert (UPDATE).
      */
-    @Test(priority = 4, groups = {"crud"}, dependsOnMethods = {"testCreateVideo"})
+    @Test(priority = 4, groups = {"crud"})
     public void testUpdateVideo() throws InterruptedException {
         log.info("✏️ UPDATE-Test gestartet");
 
@@ -117,7 +120,7 @@ public class GroupedTests extends AbstractVideoTestBase {
 
         assertEquals(updated.getTitle(), "Inception 2");
         assertEquals(updated.getAge_rating(), "16");
-        assertEquals(updated.getGenre(), "SciFi");
+        assertEquals(updated.getGenre(), "SciFi");   
 
         log.info("✅ Video aktualisiert: {}", updated.getTitle());
     }
@@ -125,7 +128,7 @@ public class GroupedTests extends AbstractVideoTestBase {
     /**
      * Das Video wird gelöscht (DELETE).
      */
-    @Test(priority = 5, groups = {"crud"}, dependsOnMethods = {"testUpdateVideo"})
+    @Test(priority = 5, groups = {"crud"})
     public void testDeleteVideo() throws InterruptedException {
         log.info("🗑️ DELETE-Test gestartet");
 

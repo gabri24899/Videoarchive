@@ -2,38 +2,38 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-23T00:46:57 MESZ" name="Default suite" finished-at="2025-06-23T00:47:09 MESZ" duration-ms="12416">
+  <suite started-at="2025-06-23T14:53:02 MESZ" name="Default suite" finished-at="2025-06-23T14:53:14 MESZ" duration-ms="12350">
     <groups>
       <group name="dataprovider">
-        <method signature="VideoDataDrivenTests.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" name="testCreateVideoWithCombinations" class="fh.aalen.test.VideoDataDrivenTests"/>
+        <method signature="DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" name="testCreateVideoWithCombinations" class="fh.aalen.test.DataProviderTest"/>
       </group> <!-- dataprovider -->
     </groups>
-    <test started-at="2025-06-23T00:46:57 MESZ" name="Default test" finished-at="2025-06-23T00:47:09 MESZ" duration-ms="12416">
-      <class name="fh.aalen.test.VideoDataDrivenTests">
-        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:46:57 MESZ" name="springTestContextBeforeTestClass" finished-at="2025-06-23T00:46:57 MESZ" duration-ms="15" status="PASS">
+    <test started-at="2025-06-23T14:53:02 MESZ" name="Default test" finished-at="2025-06-23T14:53:14 MESZ" duration-ms="12350">
+      <class name="fh.aalen.test.DataProviderTest">
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:02 MESZ" name="springTestContextBeforeTestClass" finished-at="2025-06-23T14:53:02 MESZ" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:46:57 MESZ" name="springTestContextPrepareTestInstance" finished-at="2025-06-23T00:47:02 MESZ" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="4650" status="PASS">
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:02 MESZ" name="springTestContextPrepareTestInstance" finished-at="2025-06-23T14:53:07 MESZ" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="4714" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method is-config="true" signature="videoInitialisation()[pri:0, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:02 MESZ" name="videoInitialisation" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="2045" status="PASS">
+        <test-method is-config="true" signature="videoInitialisation()[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:07 MESZ" name="videoInitialisation" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="2037" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- videoInitialisation -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="429" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="445" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.VideoDataDrivenTests.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="testCreateVideoWithCombinations" data-provider="videoCombinations" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="45" status="PASS">
+        <test-method signature="testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="testCreateVideoWithCombinations" data-provider="videoCombinations" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="14" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -59,29 +59,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateVideoWithCombinations -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.VideoDataDrivenTests.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.VideoDataDrivenTests.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="testCreateVideoWithCombinations" data-provider="videoCombinations" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="3" status="PASS">
+        <test-method signature="testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="testCreateVideoWithCombinations" data-provider="videoCombinations" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -107,29 +107,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateVideoWithCombinations -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.VideoDataDrivenTests.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.VideoDataDrivenTests.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="testCreateVideoWithCombinations" data-provider="videoCombinations" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="3" status="PASS">
+        <test-method signature="testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="testCreateVideoWithCombinations" data-provider="videoCombinations" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -155,29 +155,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateVideoWithCombinations -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.VideoDataDrivenTests.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.VideoDataDrivenTests.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="testCreateVideoWithCombinations" data-provider="videoCombinations" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="3" status="PASS">
+        <test-method signature="testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="testCreateVideoWithCombinations" data-provider="videoCombinations" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -203,29 +203,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateVideoWithCombinations -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.VideoDataDrivenTests.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextBeforeTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.VideoDataDrivenTests.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="testCreateVideoWithCombinations" data-provider="videoCombinations" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="118" status="PASS">
+        <test-method signature="testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="testCreateVideoWithCombinations" data-provider="videoCombinations" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -249,26 +249,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateVideoWithCombinations -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T00:47:04 MESZ" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="springTestContextAfterTestMethod" finished-at="2025-06-23T14:53:09 MESZ" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void fh.aalen.test.VideoDataDrivenTests.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void fh.aalen.test.DataProviderTest.testCreateVideoWithCombinations(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="cleanUpAfterClass()[pri:0, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:04 MESZ" name="cleanUpAfterClass" finished-at="2025-06-23T00:47:09 MESZ" duration-ms="5038" status="PASS">
+        <test-method is-config="true" signature="cleanUpAfterClass()[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:09 MESZ" name="cleanUpAfterClass" finished-at="2025-06-23T14:53:14 MESZ" duration-ms="5034" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUpAfterClass -->
-        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:fh.aalen.test.VideoDataDrivenTests@31d0e481]" started-at="2025-06-23T00:47:09 MESZ" name="springTestContextAfterTestClass" finished-at="2025-06-23T00:47:09 MESZ" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:fh.aalen.test.DataProviderTest@6d9f7a80]" started-at="2025-06-23T14:53:14 MESZ" name="springTestContextAfterTestClass" finished-at="2025-06-23T14:53:14 MESZ" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->
-      </class> <!-- fh.aalen.test.VideoDataDrivenTests -->
+      </class> <!-- fh.aalen.test.DataProviderTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

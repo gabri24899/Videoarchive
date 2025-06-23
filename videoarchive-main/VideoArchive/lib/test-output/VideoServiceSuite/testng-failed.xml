@@ -14,17 +14,16 @@
       <class name="fh.aalen.test.GroupedTests">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
-          <include name="testDeleteVideo"/>
-          <include name="springTestContextBeforeTestMethod"/>
           <include name="beforeEntireSuite"/>
-          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
           <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestMethod"/>
-          <include name="testCreateVideo"/>
-          <include name="afterEntireSuite"/>
+          <include name="videoInitialisation"/>
+          <include name="cleanUpAfterClass"/>
           <include name="testUpdateVideo"/>
           <include name="testReadVideoById"/>
-          <include name="testGetAllVideos"/>
+          <include name="afterEntireSuite"/>
         </methods>
       </class> <!-- fh.aalen.test.GroupedTests -->
     </classes>

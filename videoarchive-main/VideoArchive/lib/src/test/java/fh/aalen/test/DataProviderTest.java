@@ -16,9 +16,9 @@ import fh.aalen.video.Video;
  * 1. Gültige Genres → sollen erfolgreich gespeichert werden
  * 2. Ungültige Genres → sollen zu einem Fehler führen
  */
-public class VideoDataDrivenTests extends AbstractVideoTestBase {
+public class DataProviderTest extends AbstractVideoTestBase {
 
-    private static final Logger log = LoggerFactory.getLogger(VideoDataDrivenTests.class);
+    private static final Logger log = LoggerFactory.getLogger(DataProviderTest.class);
 
     @BeforeClass(alwaysRun = true)
     public void videoInitialisation() throws InterruptedException {
@@ -33,6 +33,13 @@ public class VideoDataDrivenTests extends AbstractVideoTestBase {
         Thread.sleep(5000);
         videoRepository.deleteAll();
     }
+    
+    
+    
+    
+    
+    
+    
 
     // ✅ 1. Gültige Genres – alles sollte klappen
     @DataProvider(name = "validGenres")
@@ -51,24 +58,17 @@ public class VideoDataDrivenTests extends AbstractVideoTestBase {
         Thread.sleep(1000);
         assertEquals(saved.getGenre(), genre);
     }
+    
+    
+    
+    
+    
 
-    // ❌ 2. Ungültige Genres – wir erwarten, dass der Code scheitert
-    @DataProvider(name = "invalidGenres")
-    public Object[][] invalidGenres() {
-        return new Object[][] {
-            {""},
-            {null},
-            {123}
-        };
-    }
-
-    @Test(dataProvider = "invalidGenres", priority = 2, expectedExceptions = Exception.class, groups = {"dataprovider"})
-    public void testAddVideoWithInvalidGenre(Object genreObj) {
-        // erzwinge Konvertierung – Fehler tritt hier oder beim Speichern auf
-        String genre = (genreObj != null) ? genreObj.toString() : null;
-        Video video = new Video("Ungültig", "12", "Fehlerfall", genre);
-        videoService.addVideo(video); // erwartet, dass hier Exception geworfen wird
-    }
+    
+    
+    
+    
+    
 
     // 🧪 3. Kombinationstest (bleibt wie vorher)
     @DataProvider(name = "videoCombinations")

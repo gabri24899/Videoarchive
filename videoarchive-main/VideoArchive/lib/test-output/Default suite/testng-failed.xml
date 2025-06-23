@@ -3,18 +3,22 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="fh.aalen.test.VideoDataDrivenTests">
+      <class name="fh.aalen.test.PriorityAndDependencyTests">
         <methods>
-          <include name="videoInitialisation"/>
+          <include name="logTestStart"/>
+          <include name="testDeleteVideo"/>
           <include name="springTestContextBeforeTestClass"/>
-          <include name="testAddVideoWithInvalidGenre" invocation-numbers="0 1 2"/>
           <include name="springTestContextBeforeTestMethod"/>
+          <include name="testUpdateVideo2"/>
+          <include name="videoInitialisation"/>
+          <include name="AddVideoTest"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestClass"/>
           <include name="springTestContextAfterTestMethod"/>
           <include name="cleanUpAfterClass"/>
+          <include name="testAddVideoFail"/>
         </methods>
-      </class> <!-- fh.aalen.test.VideoDataDrivenTests -->
+      </class> <!-- fh.aalen.test.PriorityAndDependencyTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

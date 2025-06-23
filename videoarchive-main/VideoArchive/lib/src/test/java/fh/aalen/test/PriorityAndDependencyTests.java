@@ -52,7 +52,7 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
      * Erstellt ein neues Video und speichert es für spätere Verwendung.
      */
     
-   // @Ignore
+   
     @Test(priority = 1 )
     public void AddVideoTest() throws InterruptedException {
         log.info("🎬 AddVideoTest gestartet");
@@ -75,7 +75,7 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
     public void testUpdateVideo() throws InterruptedException {
         log.info("✏️ Starte Update-Test für Video mit ID: {}", latestVideo.getId());
 
-        Thread.sleep(30000); // Zeit zur manuellen DB-Prüfung vor Update
+        Thread.sleep(3000); // Zeit zur manuellen DB-Prüfung vor Update
 
         Video update = new Video("Matrix Reloaded", "18", "Zweiter Teil", "Action");
         Video updated = videoService.updateVideo(latestVideo.getId(), update);
@@ -140,13 +140,13 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
         log.info("✅ Update erfolgreich: {}", updated.getTitle());
     }
     
-    @Test(dependsOnMethods = {"testUpdateVideo"})
+    @Test(dependsOnMethods = {"testUpdateVideo2"})
     public void testDeleteVideo() throws InterruptedException {
-        Thread.sleep(30000); // vor dem Löschen
+        Thread.sleep(3000); // vor dem Löschen
 
         videoService.deleteVideo(latestVideo.getId());
 
-        Thread.sleep(30000); // nach dem Löschen
+        Thread.sleep(3000); // nach dem Löschen
 
         boolean videoExists = videoService.getVideoById(latestVideo.getId()).isPresent();
         assertFalse(videoExists, "Video sollte nach dem Löschen nicht mehr vorhanden sein.");
