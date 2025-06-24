@@ -37,7 +37,7 @@ public void AfterClass() throws InterruptedException {
 }
 
 @BeforeMethod
-public void logTestStart(java.lang.reflect.Method method) throws InterruptedException {
+public void logTestStart(java.lang.reflect.Method method)  {
    log.info("\n\n Der aktuelle Test : {}", method.getName() + " Wird Ausgeführt \n");
    
 }
@@ -49,7 +49,7 @@ public void logTestStart(java.lang.reflect.Method method) throws InterruptedExce
     	
         Video testVideo = new Video("Matrix", "16", "Cyberwelt", "SciFi");
         Video savedVideo = videoService.addVideo(testVideo);
-        Thread.sleep(5000); // kurze Pause für Präsentation
+        Thread.sleep(5000); //kurze Pause für Präsentation
         assertEquals(savedVideo.getTitle(), "Matrix");
         assertNotNull(savedVideo.getId());
         assertTrue(savedVideo.getGenre().equals("SciFi"));
@@ -59,7 +59,7 @@ public void logTestStart(java.lang.reflect.Method method) throws InterruptedExce
     public void testAddVideoFail() throws InterruptedException {
     	Video testVideo = new Video("Matrix", "16", "Cyberwelt", "SciFi");
         Video savedVideo = videoService.addVideo(testVideo);
-        Thread.sleep(5000); // kurze Pause für Präsentation
+        Thread.sleep(5000); //kurze Pause für Präsentation
         assertEquals(savedVideo.getTitle(), "Spongebob");
         
     }

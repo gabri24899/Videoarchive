@@ -18,15 +18,15 @@ public class DataProviderTests extends AbstractVideoTestBase {
 
     @BeforeClass(alwaysRun = true)
     public void videoInitialisation() throws InterruptedException {
-        log.info("📥 Starte Initialisierung der Testklasse");
+        log.info(" Starte Initialisierung der Testklasse");
         videoService.getAllVideos();
         Thread.sleep(2000);
     }
 
     @AfterClass(alwaysRun = true)
     public void cleanUpAfterClass() throws InterruptedException {
-        log.info("🧼 Nach der Testklasse: Lösche alle Videos");
-        Thread.sleep(5000);
+        log.info(" Nach der Testklasse: Lösche alle Videos");
+        Thread.sleep(15000);
         videoRepository.deleteAll();
     }
     
@@ -66,7 +66,7 @@ public class DataProviderTests extends AbstractVideoTestBase {
     public void testCreateVideoWithCombinations(String title, String rating, String description, String genre) {
         Video video = new Video(title, rating, description, genre);
         Video saved = videoService.addVideo(video);
-
+        
         assertEquals(saved.getTitle(), title);
         assertEquals(saved.getAge_rating(), rating);
         assertEquals(saved.getDescription(), description);

@@ -20,13 +20,13 @@ public class GroupedTests extends AbstractVideoTestBase {
     
     @BeforeSuite(alwaysRun = true)
     public void beforeEntireSuite()  {
-        log.info("🚀 Test-Suite beginnt (BeforeSuite)");
+        log.info(" Test-Suite beginnt (BeforeSuite)");
        
     }
 
     @AfterSuite(alwaysRun = true )
     public void afterEntireSuite() {
-        log.info("🏁 Test-Suite beendet (AfterSuite)");
+        log.info(" Test-Suite beendet (AfterSuite)");
         
         
     }

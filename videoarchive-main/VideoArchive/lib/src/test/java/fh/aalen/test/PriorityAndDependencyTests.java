@@ -70,7 +70,7 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
     }
 
     
-     //Aktualisiert das zuvor erstellte Video. Läuft nur, wenn AddVideoTest erfolgreich war.
+     //Aktualisiert das zuvor erstellte Video.Läuft nur, wenn AddVideoTest erfolgreich war.
     
     
     @Test(priority = 3) // 4 Passes
@@ -94,7 +94,7 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
     }
     
     
-     //Test mit absichtlicher Falscherwartung – zu Demo-Zwecken.
+     //Test mit absichtlicher Falscherwartung zu Demo Zwecken.
     
 
   //3 Fail
@@ -127,7 +127,7 @@ public class PriorityAndDependencyTests extends AbstractVideoTestBase {
     public void testUpdateVideo2() throws InterruptedException {
         log.info(" Starte Update-Test für Video mit ID: {}", latestVideo.getId());
 
-        Thread.sleep(30000); //Zeit zur manuellen DB-Prüfung vor Update
+        Thread.sleep(5000); //Zeit zur manuellen DB-Prüfung vor Update
 
         Video update = new Video("The Dark Knight", "16", "Batman gegen Joker", "Action");
 
